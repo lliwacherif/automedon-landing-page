@@ -455,32 +455,25 @@ function initLanguageSwitcher() {
   const langOptions = document.querySelectorAll('.lang-option');
 
   if (langSwitcher && langDropdown) {
-    // Toggle dropdown
     langSwitcher.addEventListener('click', (e) => {
       e.stopPropagation();
-      langDropdown.classList.toggle('invisible');
-      langDropdown.classList.toggle('opacity-0');
+      langDropdown.classList.toggle('open');
     });
 
-    // Close dropdown when clicking outside
     document.addEventListener('click', () => {
-      langDropdown.classList.add('invisible');
-      langDropdown.classList.add('opacity-0');
+      langDropdown.classList.remove('open');
     });
 
-    // Language option click
     langOptions.forEach(option => {
       option.addEventListener('click', (e) => {
         e.stopPropagation();
         const lang = option.getAttribute('data-lang');
         setLanguage(lang);
-        langDropdown.classList.add('invisible');
-        langDropdown.classList.add('opacity-0');
+        langDropdown.classList.remove('open');
       });
     });
   }
 
-  // Set initial language (French as default)
   setLanguage(currentLanguage);
 }
 
