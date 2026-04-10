@@ -116,7 +116,7 @@
       .feature-card p{color:var(--text-secondary);font-size:.9rem;line-height:1.55}
 
       /* ── RESULTS ── */
-      .results-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+      .results-grid{display:grid;grid-template-columns:1fr;gap:1.25rem;max-width:800px;margin:0 auto}
       .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:.85rem;margin-top:1.25rem}
       .stat-item{padding:1rem;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,0.02)}
       .stat-item strong{display:block;font-family:var(--font-heading);font-size:1.5rem;color:var(--accent-light);margin-bottom:.15rem}
@@ -126,17 +126,19 @@
       .quote-card::before{content:'"';font-size:2rem;color:var(--accent);line-height:1;display:block;margin-bottom:.35rem;font-style:normal;font-family:Georgia,serif}
 
       /* ── PRICING ── */
-      .pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:780px;margin:0 auto}
-      .pricing-card{text-align:center;position:relative}
-      .pricing-card.featured{border-color:rgba(139,92,246,0.4);background:linear-gradient(170deg,rgba(40,20,90,0.3),var(--bg-card))}
-      .pricing-badge{position:absolute;top:1rem;right:1rem;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--accent2),var(--accent));border-radius:999px;padding:.3rem .65rem}
-      .price-label{color:var(--text-secondary);font-size:.88rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
-      .price-amount{font-family:var(--font-heading);font-size:3rem;margin:.35rem 0 .15rem;letter-spacing:-.02em}
-      .price-period{color:var(--text-tertiary);font-size:.88rem;margin-bottom:1.5rem}
-      .pricing-list{list-style:none;text-align:left;display:grid;gap:.65rem;margin-bottom:1.75rem}
-      .pricing-list li{display:flex;align-items:center;gap:.5rem;font-size:.9rem;color:var(--text-secondary)}
-      .pricing-list li svg{flex-shrink:0;color:var(--success)}
-      .pricing-card .btn{width:100%}
+      .pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:960px;margin:0 auto}
+      .pricing-card{text-align:center;position:relative;padding:3rem 2.5rem !important;border-radius:24px !important}
+      .pricing-card.featured{border-color:rgba(139,92,246,0.4);background:linear-gradient(170deg,rgba(40,20,90,0.3),var(--bg-card));transform:scale(1.05)}
+      .pricing-card.featured:hover{transform:scale(1.08) translateY(-2px)}
+      @media(max-width:768px){ .pricing-card.featured{transform:scale(1)} .pricing-card.featured:hover{transform:translateY(-2px)} }
+      .pricing-badge{position:absolute;top:1.25rem;right:1.25rem;font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--accent2),var(--accent));border-radius:999px;padding:.4rem .8rem}
+      .price-label{color:var(--text-secondary);font-size:1.05rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+      .price-amount{font-family:var(--font-heading);font-size:3.5rem;margin:.75rem 0 .25rem;letter-spacing:-.02em}
+      .price-period{color:var(--text-tertiary);font-size:1rem;margin-bottom:2rem}
+      .pricing-list{list-style:none;text-align:left;display:grid;gap:1.1rem;margin-bottom:2.5rem}
+      .pricing-list li{display:flex;align-items:center;gap:.85rem;font-size:1.05rem;color:var(--text-secondary)}
+      .pricing-list li svg{flex-shrink:0;color:var(--success);width:22px;height:22px}
+      .pricing-card .btn{width:100%;padding:1rem 2rem;font-size:1.1rem}
 
       /* ── WHY ── */
       .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem}
@@ -280,32 +282,6 @@
         </div>
       </section>
 
-      <!-- ====== PROBLEM ====== -->
-      <section class="section" id="problem">
-        <div class="container">
-          <div class="section-header">
-            <div class="section-label reveal">Le Problème</div>
-            <h2 class="section-title reveal">Ce Que Vous Vivez Chaque Jour</h2>
-            <p class="section-desc reveal">Gérer une agence aujourd'hui, c'est souvent un chaos opérationnel qui consomme votre temps et vos marges.</p>
-          </div>
-          <div class="two-col">
-            <div class="card reveal">
-              <div style="display:grid;gap:.85rem">
-                <div class="problem-item"><span class="icon icon-danger">✕</span><span>Des réservations mal organisées et des double-saisies</span></div>
-                <div class="problem-item"><span class="icon icon-danger">✕</span><span>Des véhicules difficiles à suivre en temps réel</span></div>
-                <div class="problem-item"><span class="icon icon-danger">✕</span><span>Des erreurs humaines fréquentes et coûteuses</span></div>
-                <div class="problem-item"><span class="icon icon-danger">✕</span><span>Une visibilité quasi nulle sur les profits réels</span></div>
-                <div class="problem-item"><span class="icon icon-danger">✕</span><span>Une perte de temps énorme au quotidien</span></div>
-              </div>
-            </div>
-            <div class="card reveal">
-              <h3 style="font-family:var(--font-heading);font-size:1.15rem;margin-bottom:.75rem">Impact direct sur votre business</h3>
-              <p style="color:var(--text-secondary);font-size:.95rem;line-height:1.65">Chaque friction opérationnelle ralentit votre croissance et fragilise l'expérience client. Le temps perdu ne se rattrape pas.</p>
-              <div class="impact-box">Résultat : vous travaillez plus… pour gagner moins.</div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <!-- ====== FEATURES ====== -->
       <section class="section" id="features">
@@ -373,10 +349,6 @@
                 <div class="stat-item"><strong>80%</strong><span>Moins de paperasse</span></div>
                 <div class="stat-item"><strong>2x</strong><span>Plus rapide</span></div>
               </div>
-            </div>
-            <div style="display:grid;gap:1.25rem">
-              <div class="card quote-card reveal">On a totalement changé notre manière de gérer l'agence. Tout est plus rapide et clair.</div>
-              <div class="card quote-card reveal">On a gagné du temps et surtout on voit enfin nos vrais chiffres de rentabilité.</div>
             </div>
           </div>
         </div>
