@@ -66,11 +66,17 @@
       .btn-outline:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
 
       /* ── HERO ── */
-      .hero{padding:8rem 0 4rem;text-align:center}
-      .hero-badge{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .9rem;border-radius:999px;border:1px solid var(--border);background:var(--accent-glow);color:var(--accent-light);font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-bottom:1.5rem}
-      .hero h1{font-family:var(--font-heading);font-size:clamp(2.2rem,5.5vw,3.8rem);line-height:1.15;letter-spacing:-.02em;max-width:850px;margin:0 auto}
+      .hero{padding:8rem 0 4rem;text-align:center;position:relative;overflow:hidden;isolation:isolate}
+      .hero > .container{position:relative;z-index:2}
+      .hero-bg-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;opacity:.85;filter:saturate(1.2) contrast(1.08);pointer-events:none;animation:heroZoom 24s ease-in-out infinite alternate}
+      .hero::before{content:'';position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse at 50% 35%,rgba(5,10,26,0.15) 0%,rgba(5,10,26,0.55) 60%,rgba(5,10,26,0.92) 100%),linear-gradient(180deg,rgba(5,10,26,0.2) 0%,rgba(5,10,26,0.45) 60%,rgba(5,10,26,0.95) 90%,var(--bg) 100%);pointer-events:none}
+      .hero::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(59,130,246,0.12),transparent 45%,rgba(139,92,246,0.12));mix-blend-mode:screen;pointer-events:none}
+      @keyframes heroZoom{0%{transform:scale(1.05) translateY(0)}100%{transform:scale(1.18) translateY(-2%)}}
+      @media(prefers-reduced-motion:reduce){.hero-bg-video{animation:none}}
+      .hero-badge{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .9rem;border-radius:999px;border:1px solid var(--border);background:var(--accent-glow);color:var(--accent-light);font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-bottom:1.5rem;backdrop-filter:blur(8px)}
+      .hero h1{font-family:var(--font-heading);font-size:clamp(2.2rem,5.5vw,3.8rem);line-height:1.15;letter-spacing:-.02em;max-width:850px;margin:0 auto;text-shadow:0 4px 24px rgba(0,0,0,0.6)}
       .hero h1 .gradient{background:linear-gradient(135deg,var(--accent-light),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-      .hero-sub{margin:1.25rem auto 0;max-width:620px;font-size:1.1rem;color:var(--text-secondary);line-height:1.7}
+      .hero-sub{margin:1.25rem auto 0;max-width:620px;font-size:1.1rem;color:var(--text-secondary);line-height:1.7;text-shadow:0 2px 12px rgba(0,0,0,0.7)}
       .hero-actions{margin-top:2rem;display:flex;gap:.85rem;justify-content:center;flex-wrap:wrap}
       .hero-proof{margin-top:1.5rem;display:flex;align-items:center;justify-content:center;gap:.5rem;color:var(--success);font-size:.9rem;font-weight:600}
 
@@ -243,6 +249,9 @@
     <main>
       <!-- ====== HERO ====== -->
       <section class="hero" id="home">
+        <video class="hero-bg-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1">
+          <source src="assets/images/videos/Futuristic_Car_Ad_Video.mp4" type="video/mp4" />
+        </video>
         <div class="container">
           <div class="reveal">
             <div class="hero-badge">🚘 Automedon</div>
@@ -322,34 +331,6 @@
               <h3>Dashboard Centralisé</h3>
               <p>Accédez à toute votre agence depuis votre téléphone ou votre ordinateur, partout.</p>
             </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ====== RESULTS ====== -->
-      <section class="section" id="results">
-        <div class="container">
-          <div class="section-header">
-            <div class="section-label reveal">Résultats</div>
-            <h2 class="section-title reveal">Des Résultats Concrets et Mesurables</h2>
-            <p class="section-desc reveal">Avec Automedon, transformez votre activité en machine rentable et pilotable.</p>
-          </div>
-          <div class="results-grid">
-            <div class="card reveal">
-              <div style="display:grid;gap:.75rem">
-                <div class="problem-item"><span class="icon icon-success">✓</span><span>Gagner plusieurs heures par semaine</span></div>
-                <div class="problem-item"><span class="icon icon-success">✓</span><span>Réduire drastiquement les erreurs humaines</span></div>
-                <div class="problem-item"><span class="icon icon-success">✓</span><span>Augmenter vos revenus grâce à une meilleure gestion</span></div>
-                <div class="problem-item"><span class="icon icon-success">✓</span><span>Avoir une vision claire de votre business</span></div>
-                <div class="problem-item"><span class="icon icon-success">✓</span><span>Offrir une expérience client plus professionnelle</span></div>
-              </div>
-              <div class="stat-grid">
-                <div class="stat-item"><strong>14+</strong><span>Agences actives</span></div>
-                <div class="stat-item"><strong>100%</strong><span>Centralisé</span></div>
-                <div class="stat-item"><strong>80%</strong><span>Moins de paperasse</span></div>
-                <div class="stat-item"><strong>2x</strong><span>Plus rapide</span></div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
