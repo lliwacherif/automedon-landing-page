@@ -653,6 +653,19 @@
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/translations.js"></script>
     <script>
+      // Set document direction as early as possible based on saved language,
+      // so Swiper (and other layout-sensitive code) initializes with the
+      // correct direction on first paint.
+      (function () {
+        try {
+          const savedLang = localStorage.getItem('language');
+          if (savedLang === 'ar') {
+            document.documentElement.dir = 'rtl';
+            document.documentElement.lang = 'ar';
+          }
+        } catch (_) {}
+      })();
+
       // Navbar scroll effect
       const navbar = document.getElementById('navbar');
       const backTop = document.getElementById('backTop');
@@ -691,22 +704,36 @@
       document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
       // Hero carousel (coverflow / center-slide style)
-      const heroSwiper = new Swiper('.hero-carousel', {
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        spaceBetween: 40,
-        loop: true,
-        speed: 700,
-        grabCursor: true,
-        autoplay: { delay: 4500, disableOnInteraction: false, pauseOnMouseEnter: true },
-        pagination: { el: '.hero-carousel .swiper-pagination', clickable: true },
-        navigation: { nextEl: '.hero-carousel .swiper-button-next', prevEl: '.hero-carousel .swiper-button-prev' },
-        keyboard: { enabled: true },
-        breakpoints: {
-          0: { spaceBetween: 16 },
-          768: { spaceBetween: 30 },
-          1200: { spaceBetween: 40 },
-        },
+      let heroSwiper = null;
+      function initHeroSwiper() {
+        if (heroSwiper) {
+          try { heroSwiper.destroy(true, true); } catch(_) {}
+          heroSwiper = null;
+        }
+        heroSwiper = new Swiper('.hero-carousel', {
+          slidesPerView: 'auto',
+          centeredSlides: true,
+          spaceBetween: 40,
+          loop: true,
+          speed: 700,
+          grabCursor: true,
+          autoplay: { delay: 4500, disableOnInteraction: false, pauseOnMouseEnter: true },
+          pagination: { el: '.hero-carousel .swiper-pagination', clickable: true },
+          navigation: { nextEl: '.hero-carousel .swiper-button-next', prevEl: '.hero-carousel .swiper-button-prev' },
+          keyboard: { enabled: true },
+          breakpoints: {
+            0: { spaceBetween: 16 },
+            768: { spaceBetween: 30 },
+            1200: { spaceBetween: 40 },
+          },
+        });
+      }
+      initHeroSwiper();
+
+      // When language direction flips (LTR <-> RTL), rebuild Swiper so it
+      // recomputes widths/positions. Otherwise slides appear blank until refresh.
+      document.addEventListener('directionchange', () => {
+        requestAnimationFrame(() => initHeroSwiper());
       });
 
       // ── Lightbox ──

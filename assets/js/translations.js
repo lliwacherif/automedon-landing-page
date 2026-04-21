@@ -497,12 +497,18 @@ function setLanguage(lang) {
   document.documentElement.lang = lang;
 
   // Handle RTL for Arabic
+  const newDir = lang === 'ar' ? 'rtl' : 'ltr';
+  const prevDir = document.documentElement.dir || 'ltr';
+  document.documentElement.dir = newDir;
   if (lang === 'ar') {
-    document.documentElement.dir = 'rtl';
     document.body.classList.add('rtl');
   } else {
-    document.documentElement.dir = 'ltr';
     document.body.classList.remove('rtl');
+  }
+
+  // Notify listeners (e.g. Swiper) that direction changed so they can re-init.
+  if (prevDir !== newDir) {
+    document.dispatchEvent(new CustomEvent('directionchange', { detail: { dir: newDir, lang } }));
   }
 }
 
