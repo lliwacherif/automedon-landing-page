@@ -11,7 +11,7 @@ const translations = {
     "nav.bookdemo": "Réserver une Démo",
 
     // Hero Section
-    "hero.title": "Automedon : Le Système d'Exploitation Complet pour les Flottes de Location de Véhicules Modernes.",
+    "hero.title": "Automedon : Le Système d'Exploitation Complet pour les Flottes de Location de Véhicules.",
     "hero.subtitle": "Arrêtez de gérer votre entreprise avec des feuilles de calcul. Automatisez les réservations, suivez l'état des véhicules et développez votre flotte avec la plateforme de gestion tout-en-un d'Automedon.",
     "hero.cta.trial": "Essai Gratuit",
     "hero.cta.demo": "Réserver une Démo",
