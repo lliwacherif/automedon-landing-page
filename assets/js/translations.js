@@ -53,9 +53,26 @@ const translations = {
     "pricing.peryear": "Par An",
     "pricing.lifetime": "Installation Unique + Accès à Vie",
     "pricing.features": "Fonctionnalités",
+    "pricing.includes": "Ce qui est inclus",
+    "pricing.everything_monthly": "Tout ce qui est dans Mensuel, plus :",
+    "pricing.pro_tag": "Pro",
+
+    // Shared plan features (from ad copy)
+    "pricing.feat.billing": "Système de facturation avancé & personnalisable",
+    "pricing.feat.contract_photo": "Photo du contrat → Réservation auto (IA)",
+    "pricing.feat.fleet": "Gestion complète : véhicules, contrats & clients",
+    "pricing.feat.integration": "Intégration 100% : factures, contrats & disponibilité synchronisés",
+    "pricing.feat.support_standard": "Support par email (réponse sous 24-48h)",
+    "pricing.feat.support_priority": "Support prioritaire (réponse rapide)",
+    "pricing.feat.updates_standard": "Mises à jour régulières",
+    "pricing.feat.updates_priority": "Mises à jour & nouvelles fonctionnalités en priorité",
+    "pricing.feat.performance_standard": "Performance standard",
+    "pricing.feat.performance_priority": "Performance & vitesse optimisées",
 
     // Plan 1
     "pricing.plan1.name": "Abonnement Mensuel",
+    "pricing.plan1.tagline": "Idéal pour démarrer et digitaliser votre agence de location rapidement.",
+    "pricing.plan1.note": "Sans engagement • Annulez à tout moment",
     "pricing.plan1.feature1": "Accès Complet au Tableau de Bord",
     "pricing.plan1.feature2": "Jusqu'à 5 Véhicules",
     "pricing.plan1.feature3": "Contrats Numériques",
@@ -64,6 +81,8 @@ const translations = {
 
     // Plan 2
     "pricing.plan2.name": "Abonnement Annuel",
+    "pricing.plan2.tagline": "Pour les agences qui veulent la meilleure expérience, les updates en avant-première et une performance maximale.",
+    "pricing.plan2.note": "Paiement annuel unique • Toutes les features Pro incluses",
     "pricing.plan2.feature1": "Toutes les fonctionnalités Mensuelles",
     "pricing.plan2.feature2": "Analyses Avancées",
     "pricing.plan2.feature3": "Intégration GPS",
@@ -189,9 +208,26 @@ const translations = {
     "pricing.peryear": "Per Year",
     "pricing.lifetime": "One-time Setup + Lifetime Access",
     "pricing.features": "Features",
+    "pricing.includes": "What's included",
+    "pricing.everything_monthly": "Everything in Monthly, plus:",
+    "pricing.pro_tag": "Pro",
+
+    // Shared plan features (from ad copy)
+    "pricing.feat.billing": "Advanced & fully customizable billing system",
+    "pricing.feat.contract_photo": "Contract photo → Auto-booking (AI)",
+    "pricing.feat.fleet": "Complete management: vehicles, contracts & clients",
+    "pricing.feat.integration": "100% integration: invoices, contracts & availability synced in real time",
+    "pricing.feat.support_standard": "Email support (reply within 24-48h)",
+    "pricing.feat.support_priority": "Priority support (fast response)",
+    "pricing.feat.updates_standard": "Regular updates",
+    "pricing.feat.updates_priority": "Priority updates & early access to new features",
+    "pricing.feat.performance_standard": "Standard performance",
+    "pricing.feat.performance_priority": "Boosted performance & speed",
 
     // Plan 1
     "pricing.plan1.name": "Monthly Subscription",
+    "pricing.plan1.tagline": "Perfect for getting started and digitizing your rental agency quickly.",
+    "pricing.plan1.note": "No commitment • Cancel anytime",
     "pricing.plan1.feature1": "Full Dashboard Access",
     "pricing.plan1.feature2": "Up to 5 Vehicles",
     "pricing.plan1.feature3": "Digital Contracts",
@@ -200,6 +236,8 @@ const translations = {
 
     // Plan 2
     "pricing.plan2.name": "Annual Subscription",
+    "pricing.plan2.tagline": "For agencies that want the best experience, early access to updates and maximum performance.",
+    "pricing.plan2.note": "One annual payment • All Pro features included",
     "pricing.plan2.feature1": "All Monthly Features",
     "pricing.plan2.feature2": "Advanced Analytics",
     "pricing.plan2.feature3": "GPS Integration",
@@ -325,9 +363,26 @@ const translations = {
     "pricing.peryear": "سنوياً",
     "pricing.lifetime": "تثبيت لمرة واحدة + وصول مدى الحياة",
     "pricing.features": "المميزات",
+    "pricing.includes": "ما هو مضمن",
+    "pricing.everything_monthly": "كل شيء في الاشتراك الشهري، بالإضافة إلى:",
+    "pricing.pro_tag": "مميز",
+
+    // Shared plan features (from ad copy)
+    "pricing.feat.billing": "نظام فوترة متقدم وقابل للتخصيص (صمم فاتورتك على قياسك)",
+    "pricing.feat.contract_photo": "صور العقد 📸 → يتحول آلياً لحجز جديد (تقنية الذكاء الاصطناعي)",
+    "pricing.feat.fleet": "تسيير كامل: الكراهب، العقود والحرفاء",
+    "pricing.feat.integration": "اندماج 100%: الفواتير، العقود وتوفر السيارات… كل شيء مربوط ويتحين في وقتو",
+    "pricing.feat.support_standard": "دعم عبر البريد الإلكتروني (رد خلال 24-48 ساعة)",
+    "pricing.feat.support_priority": "دعم ذو أولوية (استجابة سريعة)",
+    "pricing.feat.updates_standard": "تحديثات منتظمة",
+    "pricing.feat.updates_priority": "تحديثات وميزات جديدة بالأولوية",
+    "pricing.feat.performance_standard": "أداء عادي",
+    "pricing.feat.performance_priority": "أداء وسرعة محسّنة",
 
     // Plan 1
     "pricing.plan1.name": "الاشتراك الشهري",
+    "pricing.plan1.tagline": "مثالي لبدء رقمنة وكالة التأجير الخاصة بك بسرعة.",
+    "pricing.plan1.note": "بدون التزام • يمكنك الإلغاء في أي وقت",
     "pricing.plan1.feature1": "وصول كامل للوحة التحكم",
     "pricing.plan1.feature2": "حتى 5 مركبات",
     "pricing.plan1.feature3": "عقود رقمية",
@@ -336,6 +391,8 @@ const translations = {
 
     // Plan 2
     "pricing.plan2.name": "الاشتراك السنوي",
+    "pricing.plan2.tagline": "للوكالات اللي تحب أفضل تجربة، تحديثات بالأولوية وأقصى أداء وسرعة.",
+    "pricing.plan2.note": "دفعة سنوية واحدة • جميع ميزات Pro مضمنة",
     "pricing.plan2.feature1": "جميع مميزات الاشتراك الشهري",
     "pricing.plan2.feature2": "تحليلات متقدمة",
     "pricing.plan2.feature3": "تكامل GPS",

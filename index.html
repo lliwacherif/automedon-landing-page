@@ -258,19 +258,41 @@
       .quote-card::before{content:'"';font-size:2rem;color:var(--accent);line-height:1;display:block;margin-bottom:.35rem;font-style:normal;font-family:Georgia,serif}
 
       /* ── PRICING ── */
-      .pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:960px;margin:0 auto}
-      .pricing-card{text-align:center;position:relative;padding:3rem 2.5rem !important;border-radius:24px !important}
-      .pricing-card.featured{border-color:rgba(139,92,246,0.4);background:linear-gradient(170deg,rgba(40,20,90,0.3),var(--bg-card));transform:scale(1.05)}
-      .pricing-card.featured:hover{transform:scale(1.08) translateY(-2px)}
-      @media(max-width:768px){ .pricing-card.featured{transform:scale(1)} .pricing-card.featured:hover{transform:translateY(-2px)} }
-      .pricing-badge{position:absolute;top:1.25rem;right:1.25rem;font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--accent2),var(--accent));border-radius:999px;padding:.4rem .8rem}
-      .price-label{color:var(--text-secondary);font-size:1.05rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
-      .price-amount{font-family:var(--font-heading);font-size:3.5rem;margin:.75rem 0 .25rem;letter-spacing:-.02em}
-      .price-period{color:var(--text-tertiary);font-size:1rem;margin-bottom:2rem}
-      .pricing-list{list-style:none;text-align:left;display:grid;gap:1.1rem;margin-bottom:2.5rem}
-      .pricing-list li{display:flex;align-items:center;gap:.85rem;font-size:1.05rem;color:var(--text-secondary)}
-      .pricing-list li svg{flex-shrink:0;color:var(--success);width:22px;height:22px}
-      .pricing-card .btn{width:100%;padding:1rem 2rem;font-size:1.1rem}
+      .pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:1040px;margin:0 auto;align-items:stretch}
+      .pricing-card{text-align:left;position:relative;padding:2.75rem 2.25rem !important;border-radius:24px !important;display:flex;flex-direction:column;overflow:hidden;transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}
+      .pricing-card::before{content:'';position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(160deg,rgba(255,255,255,0.08),rgba(255,255,255,0) 60%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.9}
+      .pricing-card.featured{background:radial-gradient(120% 80% at 0% 0%,rgba(139,92,246,0.18),transparent 60%),linear-gradient(170deg,rgba(40,20,90,0.45),var(--bg-card));border-color:rgba(139,92,246,0.5);transform:scale(1.03);box-shadow:0 30px 80px -30px rgba(139,92,246,0.35)}
+      .pricing-card.featured::before{background:linear-gradient(160deg,rgba(139,92,246,0.9),rgba(236,72,153,0.6) 40%,rgba(59,130,246,0.4) 70%,transparent);opacity:1;animation:borderGlow 6s linear infinite}
+      @keyframes borderGlow{0%,100%{filter:hue-rotate(0deg)}50%{filter:hue-rotate(40deg)}}
+      .pricing-card:hover{transform:translateY(-4px)}
+      .pricing-card.featured:hover{transform:scale(1.05) translateY(-4px)}
+      @media(max-width:768px){ .pricing-card.featured{transform:scale(1)} .pricing-card.featured:hover,.pricing-card:hover{transform:translateY(-3px)} }
+
+      .pricing-badge{position:absolute;top:-12px;right:1.5rem;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;font-weight:800;color:#fff;background:linear-gradient(135deg,#fbbf24,#f59e0b,#ec4899);border-radius:999px;padding:.45rem .95rem;box-shadow:0 10px 25px -10px rgba(245,158,11,0.6);display:inline-flex;align-items:center;gap:.35rem}
+      .pricing-badge::before{content:'★';font-size:.8rem}
+
+      .plan-head{display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem}
+      .plan-icon{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:1.2rem;background:rgba(255,255,255,0.04);border:1px solid var(--border)}
+      .pricing-card.featured .plan-icon{background:linear-gradient(135deg,rgba(139,92,246,0.3),rgba(236,72,153,0.2));border-color:rgba(139,92,246,0.4)}
+      .price-label{color:var(--text);font-size:1.15rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin:0}
+
+      .price-row{display:flex;align-items:baseline;gap:.5rem;margin:.25rem 0 .25rem}
+      .pricing-card .price{font-family:var(--font-heading);font-size:3.75rem;letter-spacing:-.03em;line-height:1;margin:0;background:linear-gradient(135deg,#fff,#c7d2fe);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+      .pricing-card.featured .price{background:linear-gradient(135deg,#fff,#fbbf24 60%,#ec4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+      .price-currency{font-size:1.15rem;font-weight:600;color:var(--text-secondary);-webkit-text-fill-color:var(--text-secondary)}
+      .price-period{color:var(--text-tertiary);font-size:.95rem;margin:0 0 .5rem}
+      .plan-tagline{color:var(--text-secondary);font-size:.95rem;line-height:1.55;margin:0 0 1.5rem;padding-bottom:1.5rem;border-bottom:1px dashed var(--border)}
+
+      .features-heading{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-tertiary);font-weight:700;margin-bottom:.9rem}
+      .pricing-list{list-style:none;display:grid;gap:.8rem;margin:0 0 2rem;padding:0;flex-grow:1}
+      .pricing-list li{display:flex;align-items:flex-start;gap:.75rem;font-size:.98rem;color:var(--text-secondary);line-height:1.45}
+      .pricing-list li .feat-icon{flex-shrink:0;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:rgba(16,185,129,0.12);color:var(--success);margin-top:1px}
+      .pricing-list li .feat-icon svg{width:12px;height:12px}
+      .pricing-list li.pro .feat-icon{background:linear-gradient(135deg,rgba(251,191,36,0.18),rgba(236,72,153,0.18));color:#fbbf24}
+      .pricing-list li.pro span{color:var(--text)}
+      .pro-tag{display:inline-block;font-size:.62rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.15rem .5rem;border-radius:999px;background:linear-gradient(135deg,#fbbf24,#ec4899);color:#1a0a2e;margin-inline-start:.4rem;vertical-align:middle}
+      .pricing-card .btn{width:100%;padding:1rem 2rem;font-size:1.05rem;margin-top:auto}
+      .plan-note{font-size:.8rem;color:var(--text-tertiary);text-align:center;margin-top:.85rem;display:flex;align-items:center;justify-content:center;gap:.35rem}
 
       /* ── WHY ── */
       .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem}
@@ -313,7 +335,9 @@
       /* ── RTL ── */
       [dir="rtl"]{font-family:'Inter',system-ui,sans-serif}
       [dir="rtl"] .nav-links{direction:rtl}
-      [dir="rtl"] .problem-item,.pricing-list li{direction:rtl}
+      [dir="rtl"] .problem-item,[dir="rtl"] .pricing-list li{direction:rtl}
+      [dir="rtl"] .pricing-card{text-align:right}
+      [dir="rtl"] .pricing-badge{right:auto;left:1.5rem}
       [dir="rtl"] .contact-info{text-align:right}
 
       /* ── RESPONSIVE ── */
@@ -483,30 +507,57 @@
           <div class="pricing-grid">
             <!-- Monthly -->
             <article class="card pricing-card reveal">
-              <p class="price-label" data-i18n="pricing.plan1.name">Abonnement Mensuel</p>
-              <h3 class="price">60 <span style="font-size:1.2rem;font-weight:500">DT</span></h3>
+              <div class="plan-head">
+                <div class="plan-icon">🚀</div>
+                <p class="price-label" data-i18n="pricing.plan1.name">Abonnement Mensuel</p>
+              </div>
+              <div class="price-row">
+                <h3 class="price">60</h3>
+                <span class="price-currency">DT</span>
+              </div>
               <p class="price-period" data-i18n="pricing.permonth">Par Mois</p>
+              <p class="plan-tagline" data-i18n="pricing.plan1.tagline">Idéal pour démarrer et digitaliser votre agence de location rapidement.</p>
+
+              <p class="features-heading" data-i18n="pricing.includes">Ce qui est inclus</p>
               <ul class="pricing-list">
-                <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span data-i18n="pricing.plan1.feature1">Accès Complet au Tableau de Bord</span></li>
-                <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span data-i18n="pricing.plan1.feature3">Contrats Numériques</span></li>
-                <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Facturation avancée</span></li>
-                <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span data-i18n="pricing.plan1.feature4">Support par Email</span></li>
+                <li><span class="feat-icon"><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span><span data-i18n="pricing.feat.billing">Système de facturation avancé & personnalisable</span></li>
+                <li><span class="feat-icon"><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span><span data-i18n="pricing.feat.contract_photo">Photo du contrat → Réservation auto (IA)</span></li>
+                <li><span class="feat-icon"><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span><span data-i18n="pricing.feat.fleet">Gestion complète : véhicules, contrats & clients</span></li>
+                <li><span class="feat-icon"><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span><span data-i18n="pricing.feat.integration">Intégration 100% : factures, contrats & disponibilité synchronisés</span></li>
+                <li><span class="feat-icon"><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span><span data-i18n="pricing.feat.support_standard">Support par email (réponse sous 24-48h)</span></li>
+                <li><span class="feat-icon"><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span><span data-i18n="pricing.feat.updates_standard">Mises à jour régulières</span></li>
+                <li><span class="feat-icon"><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span><span data-i18n="pricing.feat.performance_standard">Performance standard</span></li>
               </ul>
               <a class="btn btn-outline" href="#contact" data-i18n="pricing.plan1.button">Commencer Mensuel</a>
+              <p class="plan-note" data-i18n="pricing.plan1.note">Sans engagement • Annulez à tout moment</p>
             </article>
+
             <!-- Annual -->
             <article class="card pricing-card featured reveal">
               <span class="pricing-badge" data-i18n="pricing.badge">Meilleur Rapport Qualité-Prix</span>
-              <p class="price-label" data-i18n="pricing.plan2.name">Abonnement Annuel</p>
-              <h3 class="price">800 <span style="font-size:1.2rem;font-weight:500">DT</span></h3>
+              <div class="plan-head">
+                <div class="plan-icon">👑</div>
+                <p class="price-label" data-i18n="pricing.plan2.name">Abonnement Annuel</p>
+              </div>
+              <div class="price-row">
+                <h3 class="price">800</h3>
+                <span class="price-currency">DT</span>
+              </div>
               <p class="price-period" data-i18n="pricing.peryear">Par An</p>
+              <p class="plan-tagline" data-i18n="pricing.plan2.tagline">Pour les agences qui veulent la meilleure expérience, les updates en avant-première et une performance maximale.</p>
+
+              <p class="features-heading" data-i18n="pricing.everything_monthly">Tout ce qui est dans Mensuel, plus :</p>
               <ul class="pricing-list">
-                <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span data-i18n="pricing.plan2.feature1">Toutes les fonctionnalités Mensuelles</span></li>
-                <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span data-i18n="pricing.plan2.feature2">Analyses Avancées</span></li>
-                <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span data-i18n="pricing.plan2.feature5">Rapports de Revenus</span></li>
-                <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span data-i18n="pricing.plan2.feature4">Support Prioritaire 24/7</span></li>
+                <li><span class="feat-icon"><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span><span data-i18n="pricing.feat.billing">Système de facturation avancé & personnalisable</span></li>
+                <li><span class="feat-icon"><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span><span data-i18n="pricing.feat.contract_photo">Photo du contrat → Réservation auto (IA)</span></li>
+                <li><span class="feat-icon"><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span><span data-i18n="pricing.feat.fleet">Gestion complète : véhicules, contrats & clients</span></li>
+                <li><span class="feat-icon"><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span><span data-i18n="pricing.feat.integration">Intégration 100% : factures, contrats & disponibilité synchronisés</span></li>
+                <li class="pro"><span class="feat-icon"><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span><span><span data-i18n="pricing.feat.updates_priority">Mises à jour & nouvelles fonctionnalités en priorité</span><span class="pro-tag" data-i18n="pricing.pro_tag">Pro</span></span></li>
+                <li class="pro"><span class="feat-icon"><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span><span><span data-i18n="pricing.feat.performance_priority">Performance & vitesse optimisées</span><span class="pro-tag" data-i18n="pricing.pro_tag">Pro</span></span></li>
+                <li class="pro"><span class="feat-icon"><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span><span><span data-i18n="pricing.feat.support_priority">Support prioritaire (réponse rapide)</span><span class="pro-tag" data-i18n="pricing.pro_tag">Pro</span></span></li>
               </ul>
               <a class="btn btn-primary" href="#contact" data-i18n="pricing.plan2.button">Obtenir l'Accès Annuel</a>
+              <p class="plan-note" data-i18n="pricing.plan2.note">Paiement annuel unique • Toutes les features Pro incluses</p>
             </article>
           </div>
         </div>
