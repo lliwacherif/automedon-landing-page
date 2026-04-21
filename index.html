@@ -259,7 +259,7 @@
 
       /* ── PRICING ── */
       .pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:1040px;margin:0 auto;align-items:stretch}
-      .pricing-card{text-align:left;position:relative;padding:2.75rem 2.25rem !important;border-radius:24px !important;display:flex;flex-direction:column;overflow:hidden;transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}
+      .pricing-card{text-align:left;position:relative;padding:2.75rem 2.25rem !important;border-radius:24px !important;display:flex;flex-direction:column;transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}
       .pricing-card::before{content:'';position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(160deg,rgba(255,255,255,0.08),rgba(255,255,255,0) 60%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.9}
       .pricing-card.featured{background:radial-gradient(120% 80% at 0% 0%,rgba(139,92,246,0.18),transparent 60%),linear-gradient(170deg,rgba(40,20,90,0.45),var(--bg-card));border-color:rgba(139,92,246,0.5);transform:scale(1.03);box-shadow:0 30px 80px -30px rgba(139,92,246,0.35)}
       .pricing-card.featured::before{background:linear-gradient(160deg,rgba(139,92,246,0.9),rgba(236,72,153,0.6) 40%,rgba(59,130,246,0.4) 70%,transparent);opacity:1;animation:borderGlow 6s linear infinite}
@@ -268,8 +268,10 @@
       .pricing-card.featured:hover{transform:scale(1.05) translateY(-4px)}
       @media(max-width:768px){ .pricing-card.featured{transform:scale(1)} .pricing-card.featured:hover,.pricing-card:hover{transform:translateY(-3px)} }
 
-      .pricing-badge{position:absolute;top:-12px;right:1.5rem;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;font-weight:800;color:#fff;background:linear-gradient(135deg,#fbbf24,#f59e0b,#ec4899);border-radius:999px;padding:.45rem .95rem;box-shadow:0 10px 25px -10px rgba(245,158,11,0.6);display:inline-flex;align-items:center;gap:.35rem}
-      .pricing-badge::before{content:'★';font-size:.8rem}
+      .pricing-badge{position:absolute;top:-14px;right:1.5rem;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;font-weight:800;color:#1a0a2e;background:linear-gradient(135deg,#fbbf24,#f59e0b,#ec4899);border-radius:999px;padding:.45rem .9rem;box-shadow:0 12px 28px -10px rgba(245,158,11,0.65),0 0 0 3px var(--bg-main);display:inline-flex;align-items:center;gap:.35rem;white-space:nowrap;z-index:2}
+      .pricing-badge::before{content:'★';font-size:.85rem;color:#1a0a2e}
+      [dir="rtl"] .pricing-badge{right:auto;left:1.5rem}
+      @media(max-width:480px){ .pricing-badge{font-size:.62rem;padding:.4rem .75rem;right:1rem} [dir="rtl"] .pricing-badge{left:1rem;right:auto} }
 
       .plan-head{display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem}
       .plan-icon{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:1.2rem;background:rgba(255,255,255,0.04);border:1px solid var(--border)}
@@ -337,7 +339,6 @@
       [dir="rtl"] .nav-links{direction:rtl}
       [dir="rtl"] .problem-item,[dir="rtl"] .pricing-list li{direction:rtl}
       [dir="rtl"] .pricing-card{text-align:right}
-      [dir="rtl"] .pricing-badge{right:auto;left:1.5rem}
       [dir="rtl"] .contact-info{text-align:right}
 
       /* ── RESPONSIVE ── */
