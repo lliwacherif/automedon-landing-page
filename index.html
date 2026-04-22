@@ -334,6 +334,13 @@
       .why-card .why-icon{font-size:1.75rem;margin-bottom:.75rem}
       .why-card h3{font-family:var(--font-heading);font-size:1rem;margin-bottom:.4rem}
       .why-card p{color:var(--text-secondary);font-size:.85rem}
+      /* Why carousel — mobile only */
+      .why-carousel{display:none;margin-top:2rem;padding:.5rem .25rem 2.75rem;overflow:visible}
+      .why-carousel .swiper-slide{height:auto;display:flex;align-items:stretch}
+      .why-carousel .swiper-slide .why-card{width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;min-height:170px}
+      .why-carousel .why-pagination{bottom:.25rem!important;position:absolute;z-index:5;text-align:center;width:100%}
+      .why-carousel .swiper-pagination-bullet{width:8px;height:8px;background:rgba(255,255,255,0.3);opacity:1;transition:all .3s}
+      .why-carousel .swiper-pagination-bullet-active{background:var(--accent-light);width:28px;border-radius:4px;box-shadow:0 0 12px rgba(96,165,250,0.6)}
 
       /* ── CTA ── */
       .cta-section{padding:4rem 0}
@@ -386,7 +393,9 @@
       }
       @media(max-width:768px){
         .two-col,.results-grid,.contact-grid,.pricing-grid{grid-template-columns:1fr}
-        .features-grid,.why-grid{grid-template-columns:1fr}
+        .features-grid{grid-template-columns:1fr}
+        .why-grid{display:none}
+        .why-carousel{display:block}
         .hero{padding:7rem 0 3rem}
         .section{padding:3.5rem 0}
         .stat-grid{grid-template-columns:1fr 1fr}
@@ -615,6 +624,15 @@
             <div class="card why-card reveal"><div class="why-icon">🤖</div><h3>Automatisation</h3><p>Éliminez les tâches répétitives et gagnez du temps chaque jour.</p></div>
             <div class="card why-card reveal"><div class="why-icon">📈</div><h3>Maximisez les Profits</h3><p>Données en temps réel pour prendre les meilleures décisions.</p></div>
           </div>
+          <div class="why-carousel swiper" aria-label="Pourquoi Automedon">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><div class="card why-card"><div class="why-icon">🇹🇳</div><h3>Fait pour la Tunisie</h3><p>Conçu spécifiquement pour le marché tunisien et ses spécificités.</p></div></div>
+              <div class="swiper-slide"><div class="card why-card"><div class="why-icon">⚡</div><h3>Simple et Rapide</h3><p>Interface intuitive, pas besoin de formation technique.</p></div></div>
+              <div class="swiper-slide"><div class="card why-card"><div class="why-icon">🤖</div><h3>Automatisation</h3><p>Éliminez les tâches répétitives et gagnez du temps chaque jour.</p></div></div>
+              <div class="swiper-slide"><div class="card why-card"><div class="why-icon">📈</div><h3>Maximisez les Profits</h3><p>Données en temps réel pour prendre les meilleures décisions.</p></div></div>
+            </div>
+            <div class="swiper-pagination why-pagination"></div>
+          </div>
         </div>
       </section>
 
@@ -773,6 +791,46 @@
       // recomputes widths/positions. Otherwise slides appear blank until refresh.
       document.addEventListener('directionchange', () => {
         requestAnimationFrame(() => initHeroSwiper());
+      });
+
+      // Why cards carousel — only on mobile (<= 768px). Auto-slides horizontally.
+      let whySwiper = null;
+      const whyMQ = window.matchMedia('(max-width: 768px)');
+      function initWhySwiper() {
+        if (!whyMQ.matches) return;
+        if (whySwiper) return;
+        whySwiper = new Swiper('.why-carousel', {
+          slidesPerView: 1.15,
+          spaceBetween: 14,
+          centeredSlides: true,
+          loop: true,
+          speed: 650,
+          grabCursor: true,
+          autoplay: { delay: 3200, disableOnInteraction: false, pauseOnMouseEnter: true },
+          pagination: { el: '.why-carousel .why-pagination', clickable: true },
+          breakpoints: {
+            420: { slidesPerView: 1.25, spaceBetween: 16 },
+            560: { slidesPerView: 1.6, spaceBetween: 18 },
+          },
+        });
+      }
+      function destroyWhySwiper() {
+        if (whySwiper) {
+          try { whySwiper.destroy(true, true); } catch (_) {}
+          whySwiper = null;
+        }
+      }
+      function syncWhySwiper() {
+        if (whyMQ.matches) initWhySwiper(); else destroyWhySwiper();
+      }
+      syncWhySwiper();
+      if (whyMQ.addEventListener) whyMQ.addEventListener('change', syncWhySwiper);
+      else whyMQ.addListener(syncWhySwiper);
+      document.addEventListener('directionchange', () => {
+        if (whyMQ.matches) {
+          destroyWhySwiper();
+          requestAnimationFrame(() => initWhySwiper());
+        }
       });
 
       // ── Lightbox ──
