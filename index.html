@@ -360,6 +360,13 @@
       .field input,.field textarea{width:100%;padding:.8rem 1rem;border-radius:10px;border:1px solid var(--border);background:rgba(5,10,26,0.8);color:var(--text);font:inherit;font-size:.92rem;outline:none;transition:border-color .2s,box-shadow .2s}
       .field input:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-glow)}
       .field textarea{min-height:110px;resize:vertical}
+      /* Distinct violet look for the contact form card so it contrasts with the dark-blue backdrop */
+      .contact-card{position:relative;background:linear-gradient(155deg,rgba(139,92,246,0.18),rgba(59,130,246,0.06) 55%,rgba(139,92,246,0.12));border:1px solid rgba(139,92,246,0.35);box-shadow:0 10px 40px rgba(139,92,246,0.18),0 2px 10px rgba(0,0,0,0.3);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+      .contact-card::before{content:'';position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(135deg,rgba(139,92,246,0.6),rgba(96,165,250,0.2) 45%,rgba(139,92,246,0.5));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.7}
+      .contact-card h3{color:#e9defe}
+      .contact-card .field input,.contact-card .field textarea{background:rgba(20,14,42,0.75);border-color:rgba(139,92,246,0.22)}
+      .contact-card .field input:focus,.contact-card .field textarea:focus{border-color:var(--accent2);box-shadow:0 0 0 3px rgba(139,92,246,0.25)}
+      .contact-card .field input::placeholder,.contact-card .field textarea::placeholder{color:#9a8cc9}
 
       /* ── FOOTER ── */
       .site-footer{border-top:1px solid var(--border);padding:2.5rem 0;margin-top:2rem;text-align:center}
@@ -677,7 +684,7 @@
               <p style="color:var(--accent-light);font-weight:600">Automedon — Le Futur de la Gestion des Agences de Location</p>
               <p>Arrêtez de gérer dans le chaos. Commencez à contrôler, optimiser et scaler votre activité.</p>
             </div>
-            <div class="card reveal">
+            <div class="card contact-card reveal">
               <h3 style="font-family:var(--font-heading);font-size:1.2rem;margin-bottom:1.25rem" data-i18n="contact.title">Envoyez-nous un Message</h3>
               <form class="contact-form" action="https://formsubmit.co/liwacherif200@gmail.com" method="POST">
                 <input type="hidden" name="_subject" value="Nouveau message Automedon" />
