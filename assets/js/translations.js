@@ -19,6 +19,17 @@ const translations = {
     "hero.badge.trial": "Essai 14 Jours",
     "hero.badge.cancel": "Annulez à Tout Moment",
 
+    // Demos / Video Showcase
+    "demos.label": "En Action",
+    "demos.title": "Voyez Automedon en Mouvement",
+    "demos.subtitle": "Découvrez en vidéo comment Automedon simplifie vos contrats et facturations.",
+    "demos.contract.tag": "Contrats Numériques",
+    "demos.contract.title": "E-Contrat Automedon",
+    "demos.contract.desc": "Photo du contrat → réservation auto via IA. Plus jamais de saisie manuelle.",
+    "demos.invoice.tag": "Facturation Pro",
+    "demos.invoice.title": "Facture Pro",
+    "demos.invoice.desc": "Système de facturation avancé et personnalisable, intégré à votre flotte.",
+
     // Features Section
     "features.feature1.title": "Suivi Intelligent de Flotte",
     "features.feature1.desc": "Surveillez la localisation GPS en temps réel, les niveaux de carburant et le kilométrage sans quitter votre bureau.",
@@ -174,6 +185,17 @@ const translations = {
     "hero.badge.trial": "14-Day Trial",
     "hero.badge.cancel": "Cancel Anytime",
 
+    // Demos / Video Showcase
+    "demos.label": "In Action",
+    "demos.title": "See Automedon in Motion",
+    "demos.subtitle": "Watch how Automedon streamlines your contracts and invoicing in real time.",
+    "demos.contract.tag": "Digital Contracts",
+    "demos.contract.title": "E-Contract Automedon",
+    "demos.contract.desc": "Snap a contract photo → AI auto-creates the booking. No more manual entry.",
+    "demos.invoice.tag": "Pro Invoicing",
+    "demos.invoice.title": "Facture Pro",
+    "demos.invoice.desc": "Advanced, customizable invoicing fully integrated with your fleet.",
+
     // Features Section
     "features.feature1.title": "Smart Fleet Tracking",
     "features.feature1.desc": "Monitor real-time GPS location, fuel levels, and mileage without leaving your desk.",
@@ -328,6 +350,17 @@ const translations = {
     "hero.badge.nocredit": "بدون بطاقة ائتمان",
     "hero.badge.trial": "تجربة 14 يوماً",
     "hero.badge.cancel": "إلغاء في أي وقت",
+
+    // Demos / Video Showcase
+    "demos.label": "في حركة",
+    "demos.title": "شاهد أوتوميدون أثناء العمل",
+    "demos.subtitle": "اكتشف بالفيديو كيف يبسّط أوتوميدون عقودك وفواتيرك.",
+    "demos.contract.tag": "العقود الرقمية",
+    "demos.contract.title": "العقد الإلكتروني أوتوميدون",
+    "demos.contract.desc": "صورة العقد → حجز تلقائي عبر الذكاء الاصطناعي. لا مزيد من الإدخال اليدوي.",
+    "demos.invoice.tag": "فوترة احترافية",
+    "demos.invoice.title": "فاتورة برو",
+    "demos.invoice.desc": "نظام فوترة متقدم وقابل للتخصيص، مدمج بالكامل مع أسطولك.",
 
     // Features Section
     "features.feature1.title": "تتبع ذكي للأسطول",
