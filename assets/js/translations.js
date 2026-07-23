@@ -164,6 +164,9 @@ const translations = {
     "contact.message.placeholder": "Tapez votre message ici",
     "contact.button": "Envoyer",
 
+    // Partners
+    "partners.title": "Nos partenaires et les agences de location utilisant notre plateforme",
+
     // Footer
     "footer.copyright": "© 2025 Automedon par CherifCorp Technologies. Propulsant l'avenir de la mobilité."
   },
@@ -330,6 +333,9 @@ const translations = {
     "contact.message.placeholder": "Type your message here",
     "contact.button": "Send",
 
+    // Partners
+    "partners.title": "Our partners and the rental car agencies using our platform",
+
     // Footer
     "footer.copyright": "© 2025 Automedon by CherifCorp Technologies. Powering the future of mobility."
   },
@@ -495,6 +501,9 @@ const translations = {
     "contact.message": "الرسالة*",
     "contact.message.placeholder": "اكتب رسالتك هنا",
     "contact.button": "إرسال",
+
+    // Partners
+    "partners.title": "شركاؤنا ووكالات تأجير السيارات التي تستخدم منصتنا",
 
     // Footer
     "footer.copyright": "© 2025 أوتوميدون من CherifCorp Technologies. ندعم مستقبل التنقل."

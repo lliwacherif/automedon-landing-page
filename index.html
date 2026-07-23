@@ -29,7 +29,7 @@
     <meta name="twitter:image" content="assets/images/about/Logo%20automedon.jpeg" />
     <meta name="twitter:image:alt" content="Automedon — Logo" />
 
-    <link rel="shortcut icon" href="assets/images/hero/icon.png" type="image/png" />
+    <link rel="shortcut icon" href="assets/images/logo/Logo%20Automedon%20for%20the%20website.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -279,6 +279,19 @@
         .lb-close{top:8px;right:8px}
       }
 
+      /* ── PARTNERS CAROUSEL ── */
+      .partners-section{padding:3.5rem 0;background:rgba(5,10,26,0.3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;margin-bottom:4rem}
+      .partners-title{text-align:center;color:var(--text-secondary);font-size:1.15rem;margin-bottom:2.5rem;font-weight:500;letter-spacing:-.01em}
+      .partners-marquee{display:flex;overflow:hidden;user-select:none;gap:3rem;mask-image:linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,1) 15%,rgba(0,0,0,1) 85%,rgba(0,0,0,0));-webkit-mask-image:linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,1) 15%,rgba(0,0,0,1) 85%,rgba(0,0,0,0));padding:0.5rem 0}
+      .partners-track{flex-shrink:0;display:flex;align-items:center;justify-content:space-around;gap:3rem;min-width:100%;animation:scrollPartners 40s linear infinite}
+      .partners-marquee:hover .partners-track{animation-play-state:paused}
+      .partners-track img{height:75px;width:auto;max-width:220px;object-fit:contain;transition:all .3s ease;border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,0.15)}
+      .partners-track img:hover{transform:scale(1.08);box-shadow:0 8px 25px rgba(0,0,0,0.3)}
+      @keyframes scrollPartners{from{transform:translateX(0)}to{transform:translateX(calc(-100% - 3rem))}}
+      [dir="rtl"] .partners-track{animation:scrollPartnersRTL 40s linear infinite}
+      @keyframes scrollPartnersRTL{from{transform:translateX(0)}to{transform:translateX(calc(100% + 3rem))}}
+      @media(max-width:768px){.partners-track img{height:50px}}
+
       /* ── SECTIONS ── */
       .section{padding:5rem 0}
       .section-header{text-align:center;margin-bottom:3rem}
@@ -446,7 +459,7 @@
       <div class="container">
         <div class="nav-inner">
           <a class="nav-brand" href="#home">
-            <img src="assets/images/hero/icon.png" alt="Automedon" />
+            <img src="assets/images/logo/Automedon%20logo%20no%20text.png" alt="Automedon" />
             <span>Automedon</span>
           </a>
 
@@ -540,6 +553,44 @@
               <button class="lb-nav lb-next" id="lbNext" aria-label="Next">›</button>
               <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
               <div class="lb-counter" id="lbCounter">1 / 10</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ====== PARTNERS ====== -->
+      <section class="partners-section reveal" id="partners">
+        <div class="container">
+          <p class="partners-title" data-i18n="partners.title">Nos partenaires et les agences de location utilisant notre plateforme</p>
+          <div class="partners-marquee">
+            <div class="partners-track">
+              <img src="assets/Partners/481003104_634942296152036_5031416239474252774_n.jpg" alt="Partner">
+              <img src="assets/Partners/Capture d’écran 2026-05-09 100857.png" alt="Partner">
+              <img src="assets/Partners/Geurfel.jpg" alt="Partner">
+              <img src="assets/Partners/IMG_20260207_115010.jpg" alt="Partner">
+              <img src="assets/Partners/IMG_20260209_140741.png" alt="Partner">
+              <img src="assets/Partners/Picsart_26-02-13_09-15-23-370.jpg" alt="Partner">
+              <img src="assets/Partners/Screenshot_20260205_213022_com_facebook_pages_app_MsysThreadViewActivity.jpg" alt="Partner">
+              <img src="assets/Partners/WhatsApp Image 2026-05-19 at 4.22.03 PM.jpeg" alt="Partner">
+              <img src="assets/Partners/auto travel logo.jpeg" alt="Partner">
+              <img src="assets/Partners/houimlirentcar.jpeg" alt="Partner">
+              <img src="assets/Partners/images (1).jpeg" alt="Partner">
+              <img src="assets/Partners/images.jpeg" alt="Partner">
+              <img src="assets/Partners/images.png" alt="Partner">
+            </div>
+            <div class="partners-track" aria-hidden="true">
+              <img src="assets/Partners/481003104_634942296152036_5031416239474252774_n.jpg" alt="Partner">
+              <img src="assets/Partners/Capture d’écran 2026-05-09 100857.png" alt="Partner">
+              <img src="assets/Partners/Geurfel.jpg" alt="Partner">
+              <img src="assets/Partners/IMG_20260207_115010.jpg" alt="Partner">
+              <img src="assets/Partners/IMG_20260209_140741.png" alt="Partner">
+              <img src="assets/Partners/Picsart_26-02-13_09-15-23-370.jpg" alt="Partner">
+              <img src="assets/Partners/Screenshot_20260205_213022_com_facebook_pages_app_MsysThreadViewActivity.jpg" alt="Partner">
+              <img src="assets/Partners/WhatsApp Image 2026-05-19 at 4.22.03 PM.jpeg" alt="Partner">
+              <img src="assets/Partners/auto travel logo.jpeg" alt="Partner">
+              <img src="assets/Partners/houimlirentcar.jpeg" alt="Partner">
+              <img src="assets/Partners/images (1).jpeg" alt="Partner">
+              <img src="assets/Partners/images.jpeg" alt="Partner">
+              <img src="assets/Partners/images.png" alt="Partner">
             </div>
           </div>
         </div>
