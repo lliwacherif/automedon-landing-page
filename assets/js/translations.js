@@ -18,6 +18,7 @@ const translations = {
     "hero.badge.nocredit": "Sans Carte Bancaire",
     "hero.badge.trial": "Essai 14 Jours",
     "hero.badge.cancel": "Annulez à Tout Moment",
+    "showcase.scroll": "Découvrez la plateforme",
 
     // Demos / Video Showcase
     "demos.label": "En Action",
@@ -29,6 +30,16 @@ const translations = {
     "demos.invoice.tag": "Facturation Pro",
     "demos.invoice.title": "Facture Pro",
     "demos.invoice.desc": "Système de facturation avancé et personnalisable, intégré à votre flotte.",
+
+    // E-Invoicing 2027
+    "einvoice.label": "Conformité Fiscale",
+    "einvoice.title": "Soyez Prêts pour la Facturation Électronique 2027",
+    "einvoice.subtitle": "La Tunisie passe à la facturation électronique obligatoire. Automedon vous accompagne dès aujourd'hui pour rester conforme, sans stress ni surprise de dernière minute.",
+    "einvoice.point1": "Factures générées automatiquement au format conforme",
+    "einvoice.point2": "Archivage numérique sécurisé, accessible à tout moment",
+    "einvoice.point3": "Mises à jour automatiques dès l'évolution de la réglementation",
+    "einvoice.point4": "Zéro paperasse, zéro risque de non-conformité",
+    "einvoice.cta": "Préparer Mon Agence",
 
     // Features Section
     "features.feature1.title": "Suivi Intelligent de Flotte",
@@ -149,7 +160,7 @@ const translations = {
 
     // Contact Section
     "contact.label": "CONTACTEZ-NOUS",
-    "contact.heading": "Parlons de Votre Projet",
+    "contact.heading": "Réservez Votre Démo",
     "contact.description": "Vous avez des questions sur Automedon ? Notre équipe est là pour vous aider à transformer la gestion de votre flotte. Remplissez le formulaire ou contactez-nous directement.",
     "contact.email.title": "Email",
     "contact.phone.title": "Téléphone",
@@ -187,6 +198,7 @@ const translations = {
     "hero.badge.nocredit": "No Credit Card",
     "hero.badge.trial": "14-Day Trial",
     "hero.badge.cancel": "Cancel Anytime",
+    "showcase.scroll": "Discover the platform",
 
     // Demos / Video Showcase
     "demos.label": "In Action",
@@ -198,6 +210,16 @@ const translations = {
     "demos.invoice.tag": "Pro Invoicing",
     "demos.invoice.title": "Facture Pro",
     "demos.invoice.desc": "Advanced, customizable invoicing fully integrated with your fleet.",
+
+    // E-Invoicing 2027
+    "einvoice.label": "Tax Compliance",
+    "einvoice.title": "Get Ready for Mandatory E-Invoicing in 2027",
+    "einvoice.subtitle": "Tunisia is moving to mandatory electronic invoicing. Automedon has you covered today, so you stay compliant with zero last-minute stress.",
+    "einvoice.point1": "Invoices auto-generated in the compliant format",
+    "einvoice.point2": "Secure digital archiving, accessible anytime",
+    "einvoice.point3": "Automatic updates as regulations evolve",
+    "einvoice.point4": "Zero paperwork, zero compliance risk",
+    "einvoice.cta": "Get My Agency Ready",
 
     // Features Section
     "features.feature1.title": "Smart Fleet Tracking",
@@ -318,7 +340,7 @@ const translations = {
 
     // Contact Section
     "contact.label": "CONTACT US",
-    "contact.heading": "Let's Talk About Your Project",
+    "contact.heading": "Book Your Demo",
     "contact.description": "Have questions about Automedon? Our team is here to help you transform your fleet management. Fill out the form or contact us directly.",
     "contact.email.title": "Email",
     "contact.phone.title": "Phone",
@@ -356,6 +378,7 @@ const translations = {
     "hero.badge.nocredit": "بدون بطاقة ائتمان",
     "hero.badge.trial": "تجربة 14 يوماً",
     "hero.badge.cancel": "إلغاء في أي وقت",
+    "showcase.scroll": "اكتشف المنصة",
 
     // Demos / Video Showcase
     "demos.label": "في حركة",
@@ -367,6 +390,16 @@ const translations = {
     "demos.invoice.tag": "فوترة احترافية",
     "demos.invoice.title": "فاتورة برو",
     "demos.invoice.desc": "نظام فوترة متقدم وقابل للتخصيص، مدمج بالكامل مع أسطولك.",
+
+    // E-Invoicing 2027
+    "einvoice.label": "الامتثال الضريبي",
+    "einvoice.title": "استعد للفوترة الإلكترونية الإجبارية 2027",
+    "einvoice.subtitle": "تتجه تونس نحو الفوترة الإلكترونية الإجبارية. أوتوميدون يرافقك منذ اليوم لتبقى ممتثلاً دون أي ضغط أو مفاجآت في اللحظة الأخيرة.",
+    "einvoice.point1": "فواتير مُنشأة تلقائياً بالصيغة المتوافقة",
+    "einvoice.point2": "أرشفة رقمية آمنة، متاحة في أي وقت",
+    "einvoice.point3": "تحديثات تلقائية مع تطور التشريعات",
+    "einvoice.point4": "صفر أوراق، صفر مخاطر عدم الامتثال",
+    "einvoice.cta": "جهّز وكالتي",
 
     // Features Section
     "features.feature1.title": "تتبع ذكي للأسطول",
@@ -408,7 +441,7 @@ const translations = {
 
     // Shared plan features (from ad copy)
     "pricing.feat.billing": "نظام فوترة متقدم وقابل للتخصيص (صمم فاتورتك على قياسك)",
-    "pricing.feat.contract_photo": "صور العقد 📸 → يتحول آلياً لحجز جديد (تقنية الذكاء الاصطناعي)",
+    "pricing.feat.contract_photo": "صورة العقد → يتحول آلياً لحجز جديد (تقنية الذكاء الاصطناعي)",
     "pricing.feat.fleet": "تسيير كامل: الكراهب، العقود والحرفاء",
     "pricing.feat.integration": "اندماج 100%: الفواتير، العقود وتوفر السيارات… كل شيء مربوط ويتحين في وقتو",
     "pricing.feat.support_standard": "دعم عبر البريد الإلكتروني (رد خلال 24-48 ساعة)",
@@ -487,7 +520,7 @@ const translations = {
 
     // Contact Section
     "contact.label": "اتصل بنا",
-    "contact.heading": "لنتحدث عن مشروعك",
+    "contact.heading": "احجز عرضك التجريبي",
     "contact.description": "هل لديك أسئلة حول أوتوميدون؟ فريقنا هنا لمساعدتك في تحويل إدارة أسطولك. املأ النموذج أو تواصل معنا مباشرة.",
     "contact.email.title": "البريد الإلكتروني",
     "contact.phone.title": "الهاتف",
