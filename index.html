@@ -113,13 +113,16 @@
       .hero-actions{margin-top:2rem;display:flex;gap:.85rem;justify-content:center;flex-wrap:wrap}
       .hero-proof{margin-top:1.5rem;display:flex;align-items:center;justify-content:center;gap:.5rem;color:var(--success);font-size:.9rem;font-weight:600}
 
-      /* ── Product scroll reveal ── */
-      .mac-scroll-stage{height:145vh;min-height:850px;position:relative;margin-top:2rem;z-index:2}
-      .mac-scroll-scene{position:sticky;top:70px;height:calc(100vh - 70px);min-height:560px;display:flex;align-items:center;justify-content:center;perspective:1200px;overflow:hidden}
-      .mac-scroll-scene::before{content:'';position:absolute;left:50%;bottom:12%;width:min(720px,72vw);height:22%;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(59,130,246,0.32),rgba(139,92,246,0.12) 45%,transparent 72%);filter:blur(28px);opacity:var(--mac-opacity,1);pointer-events:none}
-      .mac-scroll-device{position:relative;width:min(760px,86vw);transform:translate3d(0,var(--mac-y,0px),0) scale(var(--mac-scale,1)) rotateX(var(--mac-tilt,0deg));opacity:var(--mac-opacity,1);filter:drop-shadow(0 42px 55px rgba(0,0,0,.55));will-change:transform,opacity;z-index:1}
-      .mac-scroll-device img{display:block;width:100%;height:auto}
-      .mac-scroll-cue{position:absolute;left:50%;bottom:2.75rem;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.55rem;color:var(--text-tertiary);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:var(--mac-cue-opacity,1);transition:opacity .1s linear}
+      /* ── Product scroll reveal (Mac + iPhone) ── */
+      .mac-scroll-stage{height:155vh;min-height:900px;position:relative;margin-top:2rem;z-index:2}
+      .mac-scroll-scene{position:sticky;top:70px;height:calc(100vh - 70px);min-height:580px;display:flex;align-items:center;justify-content:center;perspective:1400px;overflow:hidden}
+      .mac-scroll-scene::before{content:'';position:absolute;left:50%;bottom:10%;width:min(860px,80vw);height:24%;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(59,130,246,0.34),rgba(139,92,246,0.14) 45%,transparent 72%);filter:blur(30px);opacity:var(--devices-glow,1);pointer-events:none}
+      .mac-scroll-duo{position:relative;display:flex;align-items:flex-end;justify-content:center;gap:clamp(.25rem,1.5vw,1.25rem);width:min(1080px,96vw);z-index:1}
+      .mac-scroll-device{position:relative;will-change:transform,opacity;filter:drop-shadow(0 36px 48px rgba(0,0,0,.55))}
+      .mac-scroll-device img{display:block;width:100%;height:auto;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+      .mac-scroll-device.is-mac{width:min(720px,72vw);z-index:1;transform:translate3d(var(--mac-x,0px),var(--mac-y,0px),0) scale(var(--mac-scale,1)) rotateY(var(--mac-ry,0deg)) rotateX(var(--mac-tilt,0deg));opacity:var(--mac-opacity,1)}
+      .mac-scroll-device.is-phone{width:min(210px,22vw);margin-bottom:clamp(1.5rem,4vh,3.5rem);margin-left:clamp(-3.5rem,-4vw,-1.5rem);z-index:2;transform:translate3d(var(--phone-x,0px),var(--phone-y,0px),0) scale(var(--phone-scale,1)) rotateY(var(--phone-ry,0deg)) rotateZ(var(--phone-rz,0deg));opacity:var(--phone-opacity,1)}
+      .mac-scroll-cue{position:absolute;left:50%;bottom:2.5rem;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.55rem;color:var(--text-tertiary);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:var(--mac-cue-opacity,1);transition:opacity .1s linear;z-index:3}
       .mac-scroll-cue svg{width:18px;height:18px;animation:scrollCue 1.6s ease-in-out infinite}
       @keyframes scrollCue{0%,100%{transform:translateY(0);opacity:.45}50%{transform:translateY(7px);opacity:1}}
 
@@ -280,15 +283,23 @@
         .einvoice-badge-year{font-size:3.8rem;top:-1.1rem}
       }
       @media(max-width:768px){
-        .mac-scroll-stage{height:120vh;min-height:680px}
-        .mac-scroll-scene{top:60px;height:calc(100vh - 60px);min-height:500px}
-        .mac-scroll-device{width:min(650px,96vw)}
-        .mac-scroll-cue{bottom:2rem}
+        .mac-scroll-stage{height:145vh;min-height:820px}
+        .mac-scroll-scene{top:60px;height:calc(100vh - 60px);min-height:620px}
+        .mac-scroll-duo{width:min(420px,92vw);flex-direction:column;align-items:center;justify-content:center;gap:1.1rem}
+        .mac-scroll-device.is-mac{width:min(380px,92vw)}
+        .mac-scroll-device.is-phone{width:min(150px,38vw);margin-left:0;margin-bottom:0}
+        .mac-scroll-cue{bottom:1.5rem}
+      }
+      @media(max-width:480px){
+        .mac-scroll-stage{height:150vh;min-height:760px}
+        .mac-scroll-duo{gap:.9rem}
+        .mac-scroll-device.is-mac{width:min(340px,94vw)}
+        .mac-scroll-device.is-phone{width:min(132px,36vw)}
       }
       @media(prefers-reduced-motion:reduce){
         .mac-scroll-stage{height:auto;min-height:0;margin:3rem 0}
         .mac-scroll-scene{position:relative;top:auto;height:auto;min-height:0;overflow:visible}
-        .mac-scroll-device{transform:none!important;opacity:1!important}
+        .mac-scroll-device.is-mac,.mac-scroll-device.is-phone{transform:none!important;opacity:1!important}
         .mac-scroll-cue{display:none}
       }
 
@@ -601,8 +612,13 @@
           <!-- Scroll-driven product reveal -->
           <div class="mac-scroll-stage" id="macScrollStage">
             <div class="mac-scroll-scene">
-              <div class="mac-scroll-device" id="macScrollDevice">
-                <img src="assets/images/ChatGPT Image 24 juil. 2026, 14_10_26-Photoroom.png" alt="Automedon fleet management displayed on a MacBook" />
+              <div class="mac-scroll-duo">
+                <div class="mac-scroll-device is-mac" id="macScrollDevice">
+                  <img src="assets/images/ChatGPT Image 24 juil. 2026, 14_10_26-Photoroom.png" alt="Automedon on MacBook" width="1536" height="1024" decoding="async" fetchpriority="high" />
+                </div>
+                <div class="mac-scroll-device is-phone" id="phoneScrollDevice">
+                  <img src="assets/Gemini_Generated_Image_21if4e21if4e21if-Photoroom.png" alt="Automedon on iPhone" width="1104" height="2400" decoding="async" fetchpriority="high" />
+                </div>
               </div>
               <div class="mac-scroll-cue" aria-hidden="true">
                 <span data-i18n="showcase.scroll">Découvrez la plateforme</span>
@@ -1048,21 +1064,41 @@
       }, { threshold: 0.1 });
       document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-      // Scroll-driven MacBook transition before the screenshot carousel
+      // Scroll-driven MacBook + iPhone transition before the screenshot carousel
       const macScrollStage = document.getElementById('macScrollStage');
       const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
       let macScrollTicking = false;
+
+      function clamp01(n) { return Math.min(Math.max(n, 0), 1); }
+      function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
 
       function updateMacScroll() {
         macScrollTicking = false;
         if (!macScrollStage || reduceMotion.matches) return;
         const rect = macScrollStage.getBoundingClientRect();
         const travel = Math.max(macScrollStage.offsetHeight - window.innerHeight, 1);
-        const progress = Math.min(Math.max(-rect.top / travel, 0), 1);
-        macScrollStage.style.setProperty('--mac-y', `${(-150 * progress).toFixed(1)}px`);
-        macScrollStage.style.setProperty('--mac-scale', (1 + .14 * progress).toFixed(3));
-        macScrollStage.style.setProperty('--mac-tilt', `${(5 * progress).toFixed(2)}deg`);
-        macScrollStage.style.setProperty('--mac-opacity', Math.max(0, 1 - 1.18 * progress).toFixed(3));
+        const progress = clamp01(-rect.top / travel);
+        const macP = easeOutCubic(progress);
+        // Phone lags slightly so the pair feels staggered
+        const phoneP = easeOutCubic(clamp01((progress - 0.08) / 0.92));
+        const stacked = window.matchMedia('(max-width: 768px)').matches;
+
+        macScrollStage.style.setProperty('--mac-x', stacked ? '0px' : `${(-42 * macP).toFixed(1)}px`);
+        macScrollStage.style.setProperty('--mac-y', `${((stacked ? -90 : -130) * macP).toFixed(1)}px`);
+        macScrollStage.style.setProperty('--mac-scale', (1 + (stacked ? .06 : .1) * macP).toFixed(3));
+        macScrollStage.style.setProperty('--mac-tilt', `${((stacked ? 3 : 6) * macP).toFixed(2)}deg`);
+        macScrollStage.style.setProperty('--mac-ry', stacked ? '0deg' : `${(-8 * macP).toFixed(2)}deg`);
+        macScrollStage.style.setProperty('--mac-opacity', Math.max(0, 1 - 1.15 * macP).toFixed(3));
+
+        macScrollStage.style.setProperty('--phone-x', stacked ? '0px' : `${(56 * phoneP).toFixed(1)}px`);
+        macScrollStage.style.setProperty('--phone-y', `${((stacked ? -120 : -190) * phoneP).toFixed(1)}px`);
+        macScrollStage.style.setProperty('--phone-scale', (1 + (stacked ? .1 : .16) * phoneP).toFixed(3));
+        macScrollStage.style.setProperty('--phone-ry', stacked ? '0deg' : `${(12 * phoneP).toFixed(2)}deg`);
+        macScrollStage.style.setProperty('--phone-rz', stacked ? '0deg' : `${(4 * phoneP).toFixed(2)}deg`);
+        macScrollStage.style.setProperty('--phone-opacity', Math.max(0, 1 - 1.25 * phoneP).toFixed(3));
+
+        const glow = Math.max(0, 1 - progress * 1.1);
+        macScrollStage.style.setProperty('--devices-glow', glow.toFixed(3));
         macScrollStage.style.setProperty('--mac-cue-opacity', Math.max(0, 1 - 2.2 * progress).toFixed(3));
       }
 
