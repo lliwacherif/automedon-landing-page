@@ -217,6 +217,13 @@
       .hero-showcase .swiper-button-prev{left:-4px}
       .hero-showcase .swiper-button-next{right:-4px}
 
+      @media(max-width:768px){
+        .hero-showcase .hero-nav{width:36px;height:36px}
+        .hero-showcase .hero-nav::after{font-size:13px}
+        .hero-showcase .swiper-button-prev{left:2px}
+        .hero-showcase .swiper-button-next{right:2px}
+      }
+
       /* Glow behind */
       .hero-showcase::before{content:'';position:absolute;top:50%;left:50%;width:70%;height:70%;transform:translate(-50%,-50%);background:radial-gradient(ellipse,rgba(59,130,246,0.25),transparent 70%);filter:blur(60px);z-index:-1;pointer-events:none}
 
@@ -488,9 +495,42 @@
       .contact-card{position:relative;background:linear-gradient(155deg,rgba(139,92,246,0.18),rgba(59,130,246,0.06) 55%,rgba(139,92,246,0.12));border:1px solid rgba(139,92,246,0.35);box-shadow:0 10px 40px rgba(139,92,246,0.18),0 2px 10px rgba(0,0,0,0.3);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
       .contact-card::before{content:'';position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(135deg,rgba(139,92,246,0.6),rgba(96,165,250,0.2) 45%,rgba(139,92,246,0.5));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.7}
       .contact-card h3{color:#e9defe}
-      .contact-card .field input,.contact-card .field textarea{background:rgba(20,14,42,0.75);border-color:rgba(139,92,246,0.22)}
-      .contact-card .field input:focus,.contact-card .field textarea:focus{border-color:var(--accent2);box-shadow:0 0 0 3px rgba(139,92,246,0.25)}
+      .contact-card .field input,.contact-card .field textarea,.contact-card .field select{background:rgba(20,14,42,0.75);border-color:rgba(139,92,246,0.22)}
+      .contact-card .field input:focus,.contact-card .field textarea:focus,.contact-card .field select:focus{border-color:var(--accent2);box-shadow:0 0 0 3px rgba(139,92,246,0.25)}
       .contact-card .field input::placeholder,.contact-card .field textarea::placeholder{color:#9a8cc9}
+
+      /* ── FORM TAB SWITCHER ── */
+      .form-switcher{display:flex;align-items:center;justify-content:center;margin-bottom:2rem}
+      .form-switcher-track{display:flex;border-radius:999px;background:rgba(15,20,45,0.75);border:1px solid var(--border);padding:4px;gap:2px;backdrop-filter:blur(12px)}
+      .form-tab-btn{position:relative;padding:.65rem 1.4rem;border:none;background:transparent;color:var(--text-secondary);font:inherit;font-size:.88rem;font-weight:600;border-radius:999px;cursor:pointer;transition:all .3s ease;display:inline-flex;align-items:center;gap:.45rem;white-space:nowrap;z-index:1}
+      .form-tab-btn.active{color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 6px 20px rgba(59,130,246,0.35)}
+      .form-tab-btn:not(.active):hover{color:var(--text);background:rgba(255,255,255,0.04)}
+      .form-tab-btn .tab-icon{width:16px;height:16px;flex-shrink:0}
+      .form-tab-btn .pro-pill{font-size:.62rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:.15rem .45rem;border-radius:999px;background:linear-gradient(135deg,#fbbf24,#ec4899);color:#1a0a2e;line-height:1.2}
+
+      /* Form panels */
+      .form-panel{display:none;animation:formFadeIn .35s ease}
+      .form-panel.active{display:block}
+      @keyframes formFadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+      /* Pro form two-column layout */
+      .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+      @media(max-width:560px){.form-row{grid-template-columns:1fr}}
+
+      /* Select styling */
+      .field select{width:100%;padding:.8rem 1rem;border-radius:10px;border:1px solid var(--border);background:rgba(5,10,26,0.8);color:var(--text);font:inherit;font-size:.92rem;outline:none;transition:border-color .2s,box-shadow .2s;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3c4' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center}
+      [dir="rtl"] .field select{background-position:left 1rem center}
+
+      /* Pro form highlight bar */
+      .pro-form-header{display:flex;align-items:center;gap:.65rem;margin-bottom:1.25rem}
+      .pro-form-header .pro-badge-inline{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .7rem;border-radius:999px;background:linear-gradient(135deg,rgba(251,191,36,0.15),rgba(236,72,153,0.12));border:1px solid rgba(251,191,36,0.3);color:#fbbf24;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+
+      /* Form success message */
+      .form-success{display:none;text-align:center;padding:2rem 1rem;animation:formFadeIn .4s ease}
+      .form-success.show{display:block}
+      .form-success svg{width:56px;height:56px;color:var(--success);margin:0 auto .75rem}
+      .form-success h4{font-family:var(--font-heading);font-size:1.2rem;margin-bottom:.5rem}
+      .form-success p{color:var(--text-secondary);font-size:.92rem}
 
       /* ── FOOTER ── */
       .site-footer{border-top:1px solid var(--border);padding:2.5rem 0;margin-top:2rem;text-align:center}
@@ -970,30 +1010,109 @@
               <p>Arrêtez de gérer dans le chaos. Commencez à contrôler, optimiser et scaler votre activité.</p>
             </div>
             <div class="card contact-card reveal">
-              <h3 style="font-family:var(--font-heading);font-size:1.2rem;margin-bottom:1.25rem" data-i18n="contact.title">Envoyez-nous un Message</h3>
-              <form class="contact-form" action="https://formsubmit.co/liwacherif200@gmail.com" method="POST">
-                <input type="hidden" name="_subject" value="Nouveau message Automedon" />
-                <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="text" name="_honey" style="display:none" />
-                <div class="field">
-                  <label data-i18n="contact.name">Nom Complet*</label>
-                  <input type="text" name="fullName" placeholder="Votre nom" data-i18n="contact.name.placeholder" required />
+              <!-- ── Tab Switcher ── -->
+              <div class="form-switcher">
+                <div class="form-switcher-track">
+                  <button class="form-tab-btn active" data-form-target="simpleForm" id="tabSimple">
+                    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    Contact
+                  </button>
+                  <button class="form-tab-btn" data-form-target="proForm" id="tabPro">
+                    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    Demander une Démo
+                    <span class="pro-pill">Pro</span>
+                  </button>
                 </div>
-                <div class="field">
-                  <label data-i18n="contact.email">Email*</label>
-                  <input type="email" name="email" placeholder="exemple@votremail.com" data-i18n="contact.email.placeholder" required />
+              </div>
+
+              <!-- ── Simple Contact Form ── -->
+              <div class="form-panel active" id="simpleForm">
+                <h3 style="font-family:var(--font-heading);font-size:1.2rem;margin-bottom:1.25rem" data-i18n="contact.title">Envoyez-nous un Message</h3>
+                <form class="contact-form" action="https://formsubmit.co/contact@automedon.com" method="POST">
+                  <input type="hidden" name="_subject" value="Nouveau message — Automedon Contact" />
+                  <input type="hidden" name="_template" value="table" />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="text" name="_honey" style="display:none" />
+                  <div class="field">
+                    <label data-i18n="contact.name">Nom Complet*</label>
+                    <input type="text" name="fullName" placeholder="Votre nom" data-i18n="contact.name.placeholder" required />
+                  </div>
+                  <div class="field">
+                    <label data-i18n="contact.email">Email*</label>
+                    <input type="email" name="email" placeholder="exemple@votremail.com" data-i18n="contact.email.placeholder" required />
+                  </div>
+                  <div class="field">
+                    <label data-i18n="contact.phone">Téléphone*</label>
+                    <input type="tel" name="phone" placeholder="+216 XX XXX XXX" data-i18n="contact.phone.placeholder" required />
+                  </div>
+                  <div class="field">
+                    <label data-i18n="contact.message">Message*</label>
+                    <textarea name="message" placeholder="Tapez votre message ici" data-i18n="contact.message.placeholder" required></textarea>
+                  </div>
+                  <button class="btn btn-primary" type="submit" data-i18n="contact.button">Envoyer</button>
+                </form>
+              </div>
+
+              <!-- ── Pro Demo Request Form ── -->
+              <div class="form-panel" id="proForm">
+                <div class="pro-form-header">
+                  <h3 style="font-family:var(--font-heading);font-size:1.2rem;margin:0">Demande de Démo</h3>
+                  <span class="pro-badge-inline">★ Agences</span>
                 </div>
-                <div class="field">
-                  <label data-i18n="contact.phone">Téléphone*</label>
-                  <input type="tel" name="phone" placeholder="+216 XX XXX XXX" data-i18n="contact.phone.placeholder" required />
-                </div>
-                <div class="field">
-                  <label data-i18n="contact.message">Message*</label>
-                  <textarea name="message" placeholder="Tapez votre message ici" data-i18n="contact.message.placeholder" required></textarea>
-                </div>
-                <button class="btn btn-primary" type="submit" data-i18n="contact.button">Envoyer</button>
-              </form>
+                <p style="color:var(--text-secondary);font-size:.88rem;margin-bottom:1.25rem;line-height:1.55">Vous êtes une agence de location ? Remplissez ce formulaire et notre équipe vous contactera pour organiser une démonstration personnalisée.</p>
+                <form class="contact-form" action="https://formsubmit.co/contact@automedon.com" method="POST">
+                  <input type="hidden" name="_subject" value="🚗 Demande de Démo — Agence de Location" />
+                  <input type="hidden" name="_template" value="table" />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="text" name="_honey" style="display:none" />
+                  <div class="form-row">
+                    <div class="field">
+                      <label>Nom de l'Agence*</label>
+                      <input type="text" name="agencyName" placeholder="Ex: Location Auto Express" required />
+                    </div>
+                    <div class="field">
+                      <label>Personne de Contact*</label>
+                      <input type="text" name="contactPerson" placeholder="Nom & Prénom" required />
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="field">
+                      <label>Email Professionnel*</label>
+                      <input type="email" name="email" placeholder="contact@votreagence.com" required />
+                    </div>
+                    <div class="field">
+                      <label>Téléphone*</label>
+                      <input type="tel" name="phone" placeholder="+216 XX XXX XXX" required />
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="field">
+                      <label>Taille de la Flotte*</label>
+                      <select name="fleetSize" required>
+                        <option value="" disabled selected>Nombre de véhicules</option>
+                        <option value="1-10">1 – 10 véhicules</option>
+                        <option value="11-25">11 – 25 véhicules</option>
+                        <option value="26-50">26 – 50 véhicules</option>
+                        <option value="51-100">51 – 100 véhicules</option>
+                        <option value="100+">100+ véhicules</option>
+                      </select>
+                    </div>
+                    <div class="field">
+                      <label>Ville / Région</label>
+                      <input type="text" name="city" placeholder="Ex: Tunis, Sousse…" />
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label>Message (optionnel)</label>
+                    <textarea name="message" placeholder="Décrivez vos besoins, questions ou fonctionnalités souhaitées…" rows="3"></textarea>
+                  </div>
+                  <button class="btn btn-primary" type="submit" style="background:linear-gradient(135deg,var(--accent2),var(--accent))">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    Demander ma Démo Gratuite
+                  </button>
+                </form>
+              </div>
+
             </div>
           </div>
         </div>
@@ -1244,6 +1363,22 @@
         vid.addEventListener('pause', () => {
           const anyPlaying = Array.from(demoVideos).some((v) => !v.paused);
           if (!anyPlaying && heroSwiper && heroSwiper.autoplay) heroSwiper.autoplay.start();
+        });
+      });
+
+      // ── Contact Form Tab Switcher ──
+      const formTabs = document.querySelectorAll('.form-tab-btn');
+      const formPanels = document.querySelectorAll('.form-panel');
+      formTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const targetId = tab.getAttribute('data-form-target');
+          // Update tab active state
+          formTabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          // Show target panel
+          formPanels.forEach(p => p.classList.remove('active'));
+          const targetPanel = document.getElementById(targetId);
+          if (targetPanel) targetPanel.classList.add('active');
         });
       });
     </script>
