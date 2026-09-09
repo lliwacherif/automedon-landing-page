@@ -9,16 +9,54 @@ const translations = {
     "nav.pricing": "Tarifs",
     "nav.contact": "Contact",
     "nav.bookdemo": "Réserver une Démo",
+    "nav.demos": "Démos",
+    "nav.einvoice": "2027",
+    "nav.leadership": "Direction",
+    "skip.link": "Aller au contenu",
+    "leadership.doc.title": "Automedon Leadership",
+    "leadership.doc.desc": "Les cofondateurs d'Automedon : Liwa Cherif, CEO, et Houssem Gazzah, CFO.",
+    "leadership.label": "Direction",
+    "leadership.title": "Automedon Leadership",
+    "leadership.subtitle": "Les cofondateurs.",
+    "leader.liwa.role": "CEO & Cofondateur",
+    "leader.houssem.role": "CFO & Cofondateur",
 
     // Hero Section
     "hero.title": "Automedon : Le Système d'Exploitation Complet pour les Flottes de Location de Véhicules.",
     "hero.subtitle": "Arrêtez de gérer votre entreprise avec des feuilles de calcul. Automatisez les réservations, suivez l'état des véhicules et développez votre flotte avec la plateforme de gestion tout-en-un d'Automedon.",
     "hero.cta.trial": "Essai Gratuit",
     "hero.cta.demo": "Réserver une Démo",
+    "hero.proof": "Des dizaines d'agences en Tunisie utilisent déjà Automedon",
     "hero.badge.nocredit": "Sans Carte Bancaire",
     "hero.badge.trial": "Essai 14 Jours",
     "hero.badge.cancel": "Annulez à Tout Moment",
     "showcase.scroll": "Découvrez la plateforme",
+    "showcase.label": "La plateforme",
+    "showcase.title": "Un système d'exploitation.",
+    "carousel.zoom": "Cliquer pour agrandir",
+    "carousel.tabs": "Modules Automedon",
+    "carousel.region": "Interfaces Automedon",
+    "carousel.prev": "Interface précédente",
+    "carousel.next": "Interface suivante",
+    "lightbox.label": "Agrandir l'interface",
+    "lightbox.close": "Fermer",
+    "carousel.dashboard": "Tableau de Bord",
+    "carousel.bookings": "Réservations",
+    "carousel.bookings.desc": "Agenda, filtres et contrats — chaque réservation au même endroit.",
+    "carousel.fleet": "Flotte",
+    "carousel.fleet.desc": "Catalogue véhicules, disponibilité et réservation en un coup d'œil.",
+    "carousel.vision": "Vision 360",
+    "carousel.vision.desc": "Planning et statut de toute la flotte, contrat par contrat.",
+    "carousel.contracts": "Contrats",
+    "carousel.invoices": "Facturation",
+    "carousel.reports": "Rapports",
+    "carousel.planning": "Planning",
+    "carousel.kpi": "KPIs & Performance",
+    "carousel.maintenance": "Maintenance",
+    "carousel.maintenance.desc": "Entretien, coûts et historique par véhicule.",
+    "carousel.finance": "Finance",
+    "carousel.finance.desc": "Chiffre d'affaires, occupation, impayés et santé de la flotte.",
+    "carousel.tech": "Suivi Technique",
 
     // Demos / Video Showcase
     "demos.label": "En Action",
@@ -41,6 +79,33 @@ const translations = {
     "einvoice.point4": "Zéro paperasse, zéro risque de non-conformité",
     "einvoice.cta": "Préparer Mon Agence",
 
+    // Features Section (on-page)
+    "features.title": "Une Plateforme. Tout Inclus.",
+    "features.subtitle": "Automedon centralise, automatise et optimise toute votre activité en une seule plateforme.",
+    "features.fleet.title": "Gestion de Flotte",
+    "features.fleet.desc": "Suivez chaque véhicule : disponibilité, état, utilisation et statut opérationnel en temps réel.",
+    "features.bookings.title": "Réservations Simplifiées",
+    "features.bookings.desc": "Gérez vos réservations en quelques clics, sans confusion ni double saisie.",
+    "features.contracts.title": "Contrats Intelligents",
+    "features.contracts.desc": "Générez et gérez vos contrats automatiquement avec un flux digital professionnel.",
+    "features.billing.title": "Facturation Avancée",
+    "features.billing.desc": "Créez des factures professionnelles, personnalisées et envoyées automatiquement.",
+    "features.analytics.title": "Analytics & Performance",
+    "features.analytics.desc": "Visualisez revenus, performances et opportunités de croissance depuis un dashboard unique.",
+    "features.dashboard.title": "Dashboard Centralisé",
+    "features.dashboard.desc": "Accédez à toute votre agence depuis votre téléphone ou votre ordinateur, partout.",
+
+    "why.label": "Pourquoi Automedon",
+    "why.title": "Ce N'est Pas Juste un Outil. C'est un Levier de Croissance.",
+    "why.tunisia.title": "Fait pour la Tunisie",
+    "why.tunisia.desc": "Conçu spécifiquement pour le marché tunisien et ses spécificités.",
+    "why.simple.title": "Simple et Rapide",
+    "why.simple.desc": "Interface intuitive, pas besoin de formation technique.",
+    "why.auto.title": "Automatisation",
+    "why.auto.desc": "Éliminez les tâches répétitives et gagnez du temps chaque jour.",
+    "why.profits.title": "Maximisez les Profits",
+    "why.profits.desc": "Données en temps réel pour prendre les meilleures décisions.",
+
     // Features Section
     "features.feature1.title": "Suivi Intelligent de Flotte",
     "features.feature1.desc": "Surveillez la localisation GPS en temps réel, les niveaux de carburant et le kilométrage sans quitter votre bureau.",
@@ -62,7 +127,7 @@ const translations = {
     "about.trust": "Nous Font Confiance",
 
     // CTA Section
-    "cta.title": "Prêt à Multiplier par 10 l'Efficacité de Votre Flotte ? Commencez Aujourd'hui",
+    "cta.title": "Passez à la Vitesse Supérieure",
     "cta.subtitle": "Rejoignez les agences de location en Tunisie qui utilisent Automedon pour automatiser leurs opérations quotidiennes.",
     "cta.button": "Commencer Maintenant",
 
@@ -174,12 +239,49 @@ const translations = {
     "contact.message": "Message*",
     "contact.message.placeholder": "Tapez votre message ici",
     "contact.button": "Envoyer",
+    "contact.tab.simple": "Contact",
+    "contact.tab.demo": "Demander une Démo",
+    "contact.intro.title": "Une question ? Besoin d'une démo ?",
+    "contact.intro.body": "Notre équipe vous accompagne pour optimiser votre agence et accélérer votre croissance.",
+    "contact.intro.tagline": "Automedon — Le Futur de la Gestion des Agences de Location",
+    "contact.intro.cta": "Arrêtez de gérer dans le chaos. Commencez à contrôler, optimiser et scaler votre activité.",
+
+    "demo.title": "Demande de Démo",
+    "demo.badge": "★ Agences",
+    "demo.intro": "Vous êtes une agence de location ? Remplissez ce formulaire et notre équipe vous contactera pour organiser une démonstration personnalisée.",
+    "demo.agency": "Nom de l'Agence*",
+    "demo.agency.placeholder": "Ex: Location Auto Express",
+    "demo.person": "Personne de Contact*",
+    "demo.person.placeholder": "Nom & Prénom",
+    "demo.email": "Email Professionnel*",
+    "demo.email.placeholder": "contact@votreagence.com",
+    "demo.phone": "Téléphone*",
+    "demo.phone.placeholder": "+216 XX XXX XXX",
+    "demo.fleet": "Taille de la Flotte*",
+    "demo.fleet.placeholder": "Nombre de véhicules",
+    "demo.fleet.opt1": "1 – 10 véhicules",
+    "demo.fleet.opt2": "11 – 25 véhicules",
+    "demo.fleet.opt3": "26 – 50 véhicules",
+    "demo.fleet.opt4": "51 – 100 véhicules",
+    "demo.fleet.opt5": "100+ véhicules",
+    "demo.city": "Ville / Région",
+    "demo.city.placeholder": "Ex: Tunis, Sousse…",
+    "demo.message": "Message (optionnel)",
+    "demo.message.placeholder": "Décrivez vos besoins, questions ou fonctionnalités souhaitées…",
+    "demo.button": "Demander ma Démo Gratuite",
+
+    "form.success.title": "Message envoyé",
+    "form.success": "Merci. Notre équipe vous répondra rapidement.",
+    "form.success.demo.title": "Demande reçue",
+    "form.success.demo": "Merci. Nous vous contactons pour planifier votre démo.",
+    "form.error": "Une erreur s'est produite. Réessayez ou écrivez-nous directement.",
 
     // Partners
     "partners.title": "Nos partenaires et les agences de location utilisant notre plateforme",
 
     // Footer
-    "footer.copyright": "© 2025 Automedon par CherifCorp Technologies. Propulsant l'avenir de la mobilité."
+    "footer.copyright": "© 2026 Automedon par CherifCorp Technologies. Propulsant l'avenir de la mobilité.",
+    "footer.nav": "Pied de page"
   },
 
   en: {
@@ -189,16 +291,54 @@ const translations = {
     "nav.pricing": "Pricing",
     "nav.contact": "Contact",
     "nav.bookdemo": "Book a Demo",
+    "nav.demos": "Demos",
+    "nav.einvoice": "2027",
+    "nav.leadership": "Leadership",
+    "skip.link": "Skip to content",
+    "leadership.doc.title": "Automedon Leadership",
+    "leadership.doc.desc": "The cofounders of Automedon: Liwa Cherif, CEO, and Houssem Gazzah, CFO.",
+    "leadership.label": "Leadership",
+    "leadership.title": "Automedon Leadership",
+    "leadership.subtitle": "The cofounders.",
+    "leader.liwa.role": "CEO & Cofounder",
+    "leader.houssem.role": "CFO & Cofounder",
 
     // Hero Section
     "hero.title": "Automedon: The Complete Operating System for Modern Car Rental Fleets.",
     "hero.subtitle": "Stop managing your business with spreadsheets. Automate bookings, track vehicle health, and scale your fleet with Automedon's all-in-one management platform.",
     "hero.cta.trial": "Start Your Free Trial",
     "hero.cta.demo": "Book a Demo",
+    "hero.proof": "Dozens of rental agencies in Tunisia already run on Automedon",
     "hero.badge.nocredit": "No Credit Card",
     "hero.badge.trial": "14-Day Trial",
     "hero.badge.cancel": "Cancel Anytime",
     "showcase.scroll": "Discover the platform",
+    "showcase.label": "The platform",
+    "showcase.title": "One operating system.",
+    "carousel.zoom": "Click to enlarge",
+    "carousel.tabs": "Automedon modules",
+    "carousel.region": "Automedon interfaces",
+    "carousel.prev": "Previous interface",
+    "carousel.next": "Next interface",
+    "lightbox.label": "Enlarge interface",
+    "lightbox.close": "Close",
+    "carousel.dashboard": "Dashboard",
+    "carousel.bookings": "Bookings",
+    "carousel.bookings.desc": "Agenda, filters and contracts — every booking in one place.",
+    "carousel.fleet": "Fleet",
+    "carousel.fleet.desc": "Vehicle catalog, availability and booking at a glance.",
+    "carousel.vision": "Vision 360",
+    "carousel.vision.desc": "Timeline and status for the whole fleet, contract by contract.",
+    "carousel.contracts": "Contracts",
+    "carousel.invoices": "Invoicing",
+    "carousel.reports": "Reports",
+    "carousel.planning": "Planning",
+    "carousel.kpi": "KPIs & Performance",
+    "carousel.maintenance": "Maintenance",
+    "carousel.maintenance.desc": "Service, costs and history per vehicle.",
+    "carousel.finance": "Finance",
+    "carousel.finance.desc": "Revenue, occupancy, outstanding payments and fleet health.",
+    "carousel.tech": "Technical Tracking",
 
     // Demos / Video Showcase
     "demos.label": "In Action",
@@ -221,6 +361,33 @@ const translations = {
     "einvoice.point4": "Zero paperwork, zero compliance risk",
     "einvoice.cta": "Get My Agency Ready",
 
+    // Features Section (on-page)
+    "features.title": "One Platform. Everything Included.",
+    "features.subtitle": "Automedon centralizes, automates, and optimizes your entire operation in a single platform.",
+    "features.fleet.title": "Fleet Management",
+    "features.fleet.desc": "Track every vehicle: availability, condition, usage, and operational status in real time.",
+    "features.bookings.title": "Simple Bookings",
+    "features.bookings.desc": "Manage reservations in a few clicks, with no confusion and no double entry.",
+    "features.contracts.title": "Smart Contracts",
+    "features.contracts.desc": "Generate and manage contracts automatically with a professional digital flow.",
+    "features.billing.title": "Advanced Invoicing",
+    "features.billing.desc": "Create professional, customized invoices and send them automatically.",
+    "features.analytics.title": "Analytics & Performance",
+    "features.analytics.desc": "See revenue, performance, and growth opportunities from a single dashboard.",
+    "features.dashboard.title": "Centralized Dashboard",
+    "features.dashboard.desc": "Access your whole agency from your phone or computer, anywhere.",
+
+    "why.label": "Why Automedon",
+    "why.title": "Not Just a Tool. A Growth Lever.",
+    "why.tunisia.title": "Built for Tunisia",
+    "why.tunisia.desc": "Designed specifically for the Tunisian market and how agencies actually work.",
+    "why.simple.title": "Simple and Fast",
+    "why.simple.desc": "Intuitive interface — no technical training required.",
+    "why.auto.title": "Automation",
+    "why.auto.desc": "Cut repetitive tasks and reclaim time every day.",
+    "why.profits.title": "Maximize Profits",
+    "why.profits.desc": "Real-time data so you can make the right call.",
+
     // Features Section
     "features.feature1.title": "Smart Fleet Tracking",
     "features.feature1.desc": "Monitor real-time GPS location, fuel levels, and mileage without leaving your desk.",
@@ -242,7 +409,7 @@ const translations = {
     "about.trust": "Trust Us",
 
     // CTA Section
-    "cta.title": "Ready to 10x Your Fleet Efficiency? Start Today",
+    "cta.title": "Shift Into a Higher Gear",
     "cta.subtitle": "Join rental agencies in Tunisia using Automedon to automate their daily operations.",
     "cta.button": "Get Started Now",
 
@@ -354,12 +521,49 @@ const translations = {
     "contact.message": "Message*",
     "contact.message.placeholder": "Type your message here",
     "contact.button": "Send",
+    "contact.tab.simple": "Contact",
+    "contact.tab.demo": "Request a Demo",
+    "contact.intro.title": "A question? Need a demo?",
+    "contact.intro.body": "Our team helps you optimize your agency and accelerate growth.",
+    "contact.intro.tagline": "Automedon — The Future of Rental Agency Management",
+    "contact.intro.cta": "Stop managing in chaos. Start controlling, optimizing, and scaling your operation.",
+
+    "demo.title": "Demo Request",
+    "demo.badge": "★ Agencies",
+    "demo.intro": "Are you a rental agency? Fill in this form and our team will contact you to schedule a personalized demonstration.",
+    "demo.agency": "Agency Name*",
+    "demo.agency.placeholder": "e.g. Express Auto Rentals",
+    "demo.person": "Contact Person*",
+    "demo.person.placeholder": "First & last name",
+    "demo.email": "Work Email*",
+    "demo.email.placeholder": "contact@youragency.com",
+    "demo.phone": "Phone*",
+    "demo.phone.placeholder": "+216 XX XXX XXX",
+    "demo.fleet": "Fleet Size*",
+    "demo.fleet.placeholder": "Number of vehicles",
+    "demo.fleet.opt1": "1 – 10 vehicles",
+    "demo.fleet.opt2": "11 – 25 vehicles",
+    "demo.fleet.opt3": "26 – 50 vehicles",
+    "demo.fleet.opt4": "51 – 100 vehicles",
+    "demo.fleet.opt5": "100+ vehicles",
+    "demo.city": "City / Region",
+    "demo.city.placeholder": "e.g. Tunis, Sousse…",
+    "demo.message": "Message (optional)",
+    "demo.message.placeholder": "Describe your needs, questions, or features you want…",
+    "demo.button": "Request My Free Demo",
+
+    "form.success.title": "Message sent",
+    "form.success": "Thank you. Our team will get back to you shortly.",
+    "form.success.demo.title": "Request received",
+    "form.success.demo": "Thank you. We’ll contact you to schedule your demo.",
+    "form.error": "Something went wrong. Please try again or email us directly.",
 
     // Partners
     "partners.title": "Our partners and the rental car agencies using our platform",
 
     // Footer
-    "footer.copyright": "© 2025 Automedon by CherifCorp Technologies. Powering the future of mobility."
+    "footer.copyright": "© 2026 Automedon by CherifCorp Technologies. Powering the future of mobility.",
+    "footer.nav": "Footer"
   },
 
   ar: {
@@ -369,16 +573,54 @@ const translations = {
     "nav.pricing": "الأسعار",
     "nav.contact": "اتصل بنا",
     "nav.bookdemo": "احجز عرضاً تجريبياً",
+    "nav.demos": "عروض",
+    "nav.einvoice": "2027",
+    "nav.leadership": "القيادة",
+    "skip.link": "تخطي إلى المحتوى",
+    "leadership.doc.title": "Automedon Leadership",
+    "leadership.doc.desc": "الشريكان المؤسسان لأوتوميدون: ليوا شريف، الرئيس التنفيذي، وحسام قزاح، المدير المالي.",
+    "leadership.label": "القيادة",
+    "leadership.title": "Automedon Leadership",
+    "leadership.subtitle": "الشريكان المؤسسان.",
+    "leader.liwa.role": "الرئيس التنفيذي والشريك المؤسس",
+    "leader.houssem.role": "المدير المالي والشريك المؤسس",
 
     // Hero Section
     "hero.title": "أوتوميدون: نظام التشغيل المتكامل لإدارة أساطيل تأجير السيارات الحديثة.",
     "hero.subtitle": "توقف عن إدارة أعمالك بجداول البيانات. قم بأتمتة الحجوزات، تتبع حالة المركبات، ووسّع أسطولك مع منصة أوتوميدون الشاملة للإدارة.",
     "hero.cta.trial": "تجربة مجانية",
     "hero.cta.demo": "احجز عرضاً تجريبياً",
+    "hero.proof": "عشرات وكالات التأجير في تونس تعتمد أوتوميدون بالفعل",
     "hero.badge.nocredit": "بدون بطاقة ائتمان",
     "hero.badge.trial": "تجربة 14 يوماً",
     "hero.badge.cancel": "إلغاء في أي وقت",
     "showcase.scroll": "اكتشف المنصة",
+    "showcase.label": "المنصة",
+    "showcase.title": "نظام تشغيل واحد.",
+    "carousel.zoom": "انقر للتكبير",
+    "carousel.tabs": "وحدات أوتوميدون",
+    "carousel.region": "واجهات أوتوميدون",
+    "carousel.prev": "الواجهة السابقة",
+    "carousel.next": "الواجهة التالية",
+    "lightbox.label": "تكبير الواجهة",
+    "lightbox.close": "إغلاق",
+    "carousel.dashboard": "لوحة التحكم",
+    "carousel.bookings": "الحجوزات",
+    "carousel.bookings.desc": "الأجندة والفلاتر والعقود — كل حجز في مكان واحد.",
+    "carousel.fleet": "الأسطول",
+    "carousel.fleet.desc": "كتالوج المركبات والتوفر والحجز بنظرة واحدة.",
+    "carousel.vision": "Vision 360",
+    "carousel.vision.desc": "الجدول الزمني وحالة الأسطول بالكامل، عقدًا بعقد.",
+    "carousel.contracts": "العقود",
+    "carousel.invoices": "الفوترة",
+    "carousel.reports": "التقارير",
+    "carousel.planning": "التخطيط",
+    "carousel.kpi": "مؤشرات الأداء",
+    "carousel.maintenance": "الصيانة",
+    "carousel.maintenance.desc": "الصيانة والتكاليف والسجل لكل مركبة.",
+    "carousel.finance": "المالية",
+    "carousel.finance.desc": "رقم المعاملات، الإشغال، المتأخرات وصحة الأسطول.",
+    "carousel.tech": "المتابعة التقنية",
 
     // Demos / Video Showcase
     "demos.label": "في حركة",
@@ -401,6 +643,33 @@ const translations = {
     "einvoice.point4": "صفر أوراق، صفر مخاطر عدم الامتثال",
     "einvoice.cta": "جهّز وكالتي",
 
+    // Features Section (on-page)
+    "features.title": "منصة واحدة. كل شيء مضمّن.",
+    "features.subtitle": "يجمع أوتوميدون نشاطك بالكامل ويؤتمته ويحسّنه في منصة واحدة.",
+    "features.fleet.title": "إدارة الأسطول",
+    "features.fleet.desc": "تابع كل مركبة: التوفر، الحالة، الاستعمال والحالة التشغيلية في الوقت الفعلي.",
+    "features.bookings.title": "حجوزات مبسّطة",
+    "features.bookings.desc": "أدِر حجوزاتك في بضع نقرات، دون لبس ولا إدخال مزدوج.",
+    "features.contracts.title": "عقود ذكية",
+    "features.contracts.desc": "أنشئ عقودك وأدرها تلقائياً بتدفّق رقمي احترافي.",
+    "features.billing.title": "فوترة متقدمة",
+    "features.billing.desc": "أنشئ فواتير احترافية ومخصّصة وأرسلها تلقائياً.",
+    "features.analytics.title": "تحليلات وأداء",
+    "features.analytics.desc": "شاهد الإيرادات والأداء وفرص النمو من لوحة تحكم واحدة.",
+    "features.dashboard.title": "لوحة تحكم مركزية",
+    "features.dashboard.desc": "ادخل إلى وكالتك كاملة من هاتفك أو حاسوبك، أينما كنت.",
+
+    "why.label": "لماذا أوتوميدون",
+    "why.title": "ليس مجرد أداة. إنه رافعة نمو.",
+    "why.tunisia.title": "مصمّم لتونس",
+    "why.tunisia.desc": "مبني خصيصاً للسوق التونسي وخصوصياته.",
+    "why.simple.title": "بسيط وسريع",
+    "why.simple.desc": "واجهة بديهية، دون حاجة لتدريب تقني.",
+    "why.auto.title": "الأتمتة",
+    "why.auto.desc": "تخلّص من المهام المتكررة ووفّر الوقت كل يوم.",
+    "why.profits.title": "ضاعف الأرباح",
+    "why.profits.desc": "بيانات لحظية لاتخاذ أفضل القرارات.",
+
     // Features Section
     "features.feature1.title": "تتبع ذكي للأسطول",
     "features.feature1.desc": "راقب موقع GPS المباشر، مستويات الوقود، والمسافة المقطوعة دون مغادرة مكتبك.",
@@ -422,7 +691,7 @@ const translations = {
     "about.trust": "يثقون بنا",
 
     // CTA Section
-    "cta.title": "مستعد لمضاعفة كفاءة أسطولك 10 مرات؟ ابدأ اليوم",
+    "cta.title": "انتقل إلى السرعة القصوى",
     "cta.subtitle": "انضم إلى وكالات التأجير في تونس التي تستخدم أوتوميدون لأتمتة عملياتها اليومية.",
     "cta.button": "ابدأ الآن",
 
@@ -534,12 +803,49 @@ const translations = {
     "contact.message": "الرسالة*",
     "contact.message.placeholder": "اكتب رسالتك هنا",
     "contact.button": "إرسال",
+    "contact.tab.simple": "اتصال",
+    "contact.tab.demo": "طلب عرض تجريبي",
+    "contact.intro.title": "سؤال؟ تحتاج عرضاً تجريبياً؟",
+    "contact.intro.body": "يرافقك فريقنا لتحسين وكالتك وتسريع نموّك.",
+    "contact.intro.tagline": "أوتوميدون — مستقبل إدارة وكالات التأجير",
+    "contact.intro.cta": "توقّف عن الإدارة في الفوضى. ابدأ بالتحكم والتحسين وتوسيع نشاطك.",
+
+    "demo.title": "طلب عرض تجريبي",
+    "demo.badge": "★ وكالات",
+    "demo.intro": "هل أنت وكالة تأجير؟ املأ هذا النموذج وسيتصل بك فريقنا لتنظيم عرض تجريبي مخصّص.",
+    "demo.agency": "اسم الوكالة*",
+    "demo.agency.placeholder": "مثال: Location Auto Express",
+    "demo.person": "شخص الاتصال*",
+    "demo.person.placeholder": "الاسم واللقب",
+    "demo.email": "البريد المهني*",
+    "demo.email.placeholder": "contact@votreagence.com",
+    "demo.phone": "الهاتف*",
+    "demo.phone.placeholder": "+216 XX XXX XXX",
+    "demo.fleet": "حجم الأسطول*",
+    "demo.fleet.placeholder": "عدد المركبات",
+    "demo.fleet.opt1": "1 – 10 مركبات",
+    "demo.fleet.opt2": "11 – 25 مركبة",
+    "demo.fleet.opt3": "26 – 50 مركبة",
+    "demo.fleet.opt4": "51 – 100 مركبة",
+    "demo.fleet.opt5": "أكثر من 100 مركبة",
+    "demo.city": "المدينة / الجهة",
+    "demo.city.placeholder": "مثال: تونس، سوسة…",
+    "demo.message": "رسالة (اختياري)",
+    "demo.message.placeholder": "صف احتياجاتك أو أسئلتك أو الميزات المطلوبة…",
+    "demo.button": "اطلب عرضي التجريبي المجاني",
+
+    "form.success.title": "تم إرسال الرسالة",
+    "form.success": "شكراً لك. سيجيبك فريقنا قريباً.",
+    "form.success.demo.title": "تم استلام الطلب",
+    "form.success.demo": "شكراً لك. سنتواصل معك لتحديد موعد العرض التجريبي.",
+    "form.error": "حدث خطأ. أعد المحاولة أو راسلنا مباشرة.",
 
     // Partners
     "partners.title": "شركاؤنا ووكالات تأجير السيارات التي تستخدم منصتنا",
 
     // Footer
-    "footer.copyright": "© 2025 أوتوميدون من CherifCorp Technologies. ندعم مستقبل التنقل."
+    "footer.copyright": "© 2026 أوتوميدون من CherifCorp Technologies. ندعم مستقبل التنقل.",
+    "footer.nav": "تذييل الصفحة"
   }
 };
 
@@ -549,29 +855,32 @@ let currentLanguage = localStorage.getItem('language') || 'fr';
 function setLanguage(lang) {
   currentLanguage = lang;
   localStorage.setItem('language', lang);
-  
-  // Update all elements with data-i18n attribute
+  const dict = translations[lang] || translations.fr;
+
   document.querySelectorAll('[data-i18n]').forEach(element => {
     const key = element.getAttribute('data-i18n');
-    if (translations[lang] && translations[lang][key]) {
-      if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-        element.placeholder = translations[lang][key];
-      } else {
-        element.textContent = translations[lang][key];
-      }
-    }
+    if (!dict[key]) return;
+    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') return;
+    element.textContent = dict[key];
   });
 
-  // Update current language display
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+    const key = element.getAttribute('data-i18n-placeholder');
+    if (dict[key]) element.placeholder = dict[key];
+  });
+
+  document.querySelectorAll('[data-i18n-aria]').forEach(element => {
+    const key = element.getAttribute('data-i18n-aria');
+    if (dict[key]) element.setAttribute('aria-label', dict[key]);
+  });
+
   const currentLangDisplay = document.getElementById('currentLang');
   if (currentLangDisplay) {
     currentLangDisplay.textContent = lang.toUpperCase();
   }
 
-  // Update HTML lang attribute
   document.documentElement.lang = lang;
 
-  // Handle RTL for Arabic
   const newDir = lang === 'ar' ? 'rtl' : 'ltr';
   const prevDir = document.documentElement.dir || 'ltr';
   document.documentElement.dir = newDir;
@@ -581,7 +890,6 @@ function setLanguage(lang) {
     document.body.classList.remove('rtl');
   }
 
-  // Notify listeners (e.g. Swiper) that direction changed so they can re-init.
   if (prevDir !== newDir) {
     document.dispatchEvent(new CustomEvent('directionchange', { detail: { dir: newDir, lang } }));
   }
@@ -595,11 +903,20 @@ function initLanguageSwitcher() {
   if (langSwitcher && langDropdown) {
     langSwitcher.addEventListener('click', (e) => {
       e.stopPropagation();
-      langDropdown.classList.toggle('open');
+      const open = langDropdown.classList.toggle('open');
+      langSwitcher.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
 
     document.addEventListener('click', () => {
       langDropdown.classList.remove('open');
+      langSwitcher.setAttribute('aria-expanded', 'false');
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        langDropdown.classList.remove('open');
+        langSwitcher.setAttribute('aria-expanded', 'false');
+      }
     });
 
     langOptions.forEach(option => {
@@ -608,6 +925,7 @@ function initLanguageSwitcher() {
         const lang = option.getAttribute('data-lang');
         setLanguage(lang);
         langDropdown.classList.remove('open');
+        langSwitcher.setAttribute('aria-expanded', 'false');
       });
     });
   }

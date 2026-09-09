@@ -1,0 +1,197 @@
+{
+  "version": 1,
+  "skills": {
+    "anthropic-frontend-design": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/anthropic-frontend-design/SKILL.md",
+      "computedHash": "835b4f089c2f930fd88f6c9150ac4b98d43a5909c366430e125109419a01eae2"
+    },
+    "claude-design-skill": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/claude-design-skill/SKILL.md",
+      "computedHash": "07d0b26a6f04279b5efedf7e9de465ecaed4f4a51c54c50745fd58053fb098b6"
+    },
+    "design-brief-gate": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/design-brief-gate/SKILL.md",
+      "computedHash": "c4d1d61e12f1c535676b77cb8e3d919cab5beefddd7b9587b5f4226e54bb438f"
+    },
+    "design-review-visual": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/design-review-visual/SKILL.md",
+      "computedHash": "d1dd7aa419c40a86ece81d7c5bc39166e2fd81d898db4d4eb4ec6884817b42c6"
+    },
+    "design-system-governor": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/design-system-governor/SKILL.md",
+      "computedHash": "140cf6a94df55af0e72abc61893cab9a82f6bdedbba24844176b68550b75ea9e"
+    },
+    "design-tokens-process": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/design-tokens-process/SKILL.md",
+      "computedHash": "eb00885fe071e9fd2f4d17c55540a7d97b329aaafa3c06335340c53576bd9de0"
+    },
+    "designer-grill-me": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/designer-grill-me/SKILL.md",
+      "computedHash": "18e52813723c766b861c232f2ceadbd97315a3153523306b5c7acf39bb119193"
+    },
+    "figma-design-system-rules": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/figma-design-system-rules/SKILL.md",
+      "computedHash": "cc0befa51a4759f8e711180c4d6199cdbcf0cafd4e320a287fc207960a57cf78"
+    },
+    "figma-implement-design": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/figma-implement-design/SKILL.md",
+      "computedHash": "1c8aa4b1c2cad4c490a5bc1a025c3b6ba9f38fa44fb685e19b962b5d5044d0d9"
+    },
+    "flex-grid-flow": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/flex-grid-flow/SKILL.md",
+      "computedHash": "cc296203a1283fe53f76d486596ddcec962193dbe0be8151852d7add3980e43b"
+    },
+    "frontend-checklist-audit": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-checklist-audit/SKILL.md",
+      "computedHash": "0f5cf1b6483851ff5c10029be63bd13d8d6c885eeb37d02c43e244f45b03f774"
+    },
+    "frontend-redesign-orchestrator": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-redesign-orchestrator/SKILL.md",
+      "computedHash": "e488d40d470939e58d5724e2f766cda9d92b7ffa7bdc0557827e3ac87d32f086"
+    },
+    "frontend-slides": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-slides/SKILL.md",
+      "computedHash": "fe8185627254e0c9b208d276a02d9658c0d6f51bc141af1eb8677433d8797153"
+    },
+    "frontend-ui-engineering": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-ui-engineering/SKILL.md",
+      "computedHash": "19d90e900e53c5bfd2736989a85059867f139554f22ff4012141441d9bd94b2a"
+    },
+    "html-effectiveness": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/html-effectiveness/SKILL.md",
+      "computedHash": "d2bd3ccd63ff57092133cbd69fd1d290988c66172b687b9fc09aedd627678408"
+    },
+    "ilm-alan-frontend-design": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ilm-alan-frontend-design/SKILL.md",
+      "computedHash": "7d35784a02266e531803323251b45aa097ff9c4fbc866c5c050d350b39f7997b"
+    },
+    "microsoft-frontend-design-review": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/microsoft-frontend-design-review/SKILL.md",
+      "computedHash": "a61ba15934d357ee132f1c347f8e42d168a81e7b8ae649c90fc3d74c4711cc22"
+    },
+    "minimal-design-system": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/minimal-design-system/SKILL.md",
+      "computedHash": "989b16adfe854adfaf4c6debe949510023d4b80bdd02a9a85e0e130dcdb67000"
+    },
+    "product-design-intake": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/product-design-intake/SKILL.md",
+      "computedHash": "0ebeb2ca68e30db5115b59a67685e3f270602a60e1eb9a726323e1aa9c40001e"
+    },
+    "product-showcase": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/product-showcase/SKILL.md",
+      "computedHash": "17b614b68a15d6bb20b64f3a11eb814a401c2e32d6648897cfd345860ee248be"
+    },
+    "shadcn-blocks": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/shadcn-blocks/SKILL.md",
+      "computedHash": "81c4ff7f26b383be7cbffab9769d1174c912946d9f72db926e5b53ce51ffbe13"
+    },
+    "shadcn-official": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/shadcn-official/SKILL.md",
+      "computedHash": "e041e343a3f943ded58975d83407727ac56ff049d6526320ef455f61680a6120"
+    },
+    "site-design-loop": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/site-design-loop/SKILL.md",
+      "computedHash": "58694d67bb5fcde927c6e2443b40e45e95d2a12d0269df7b0fcfb11b0b0b03cf"
+    },
+    "stitch-design-md": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/stitch-design-md/SKILL.md",
+      "computedHash": "94634c2ec0aea596b7059e51ca7217aec5ba84b1531a109a152da768b3ed5c32"
+    },
+    "stitch-enhance-prompt": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/stitch-enhance-prompt/SKILL.md",
+      "computedHash": "eb3c1a6f29ca8e6694063fad325168045f633a209161399088e30830a228e41b"
+    },
+    "stitch-react-components": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/stitch-react-components/SKILL.md",
+      "computedHash": "6d2569dae3c115dbff0ce4211c5bbe3f4a00a2fd43ab0a923683eace975955a8"
+    },
+    "stitch-taste-design": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/stitch-taste-design/SKILL.md",
+      "computedHash": "cb89f5c2de53bfb558d9803f3eda482202a780982af4f1b79ade66861c387b52"
+    },
+    "tailwind-design-system": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/tailwind-design-system/SKILL.md",
+      "computedHash": "7ace0c302750845663ab97bfe34cfb29941c25ec813855f73ff96a7277b4c06f"
+    },
+    "ui-review-gate": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ui-review-gate/SKILL.md",
+      "computedHash": "793c7a200e92c9d5f69a4b75fd4ee88cf2e94d1fc7331f6cbfee614c4366dfcc"
+    },
+    "vercel-web-design-guidelines": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/vercel-web-design-guidelines/SKILL.md",
+      "computedHash": "782e2b148a5a66c06c818bd21d5b5dc1916ce7f3f13ba515eea2b773e0792302"
+    },
+    "visual-direction-picker": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/visual-direction-picker/SKILL.md",
+      "computedHash": "9af3eb73eb674403c662bdd718fe80a9eeda6078a40e12a5b969ebefcb897c3a"
+    },
+    "web-design-engineer": {
+      "source": "Joker-of-Gotham/chika-frontend-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/web-design-engineer/SKILL.md",
+      "computedHash": "2a605bdddf34ce281fb4b448fe8b2197068e88b623581fe2ce2d83951f3b5d4f"
+    }
+  }
+}
