@@ -193,6 +193,68 @@
         </div>
       </section>
 
+      <!-- ====== AETHON ====== -->
+      <section class="section aethon-section" id="aethon" aria-labelledby="aethon-title">
+        <div class="container aethon-grid">
+          <div class="aethon-intro">
+            <h2 class="section-title aethon-title" id="aethon-title" data-i18n="aethon.title">AETHON, l’IA au cœur d’Automedon</h2>
+            <p class="section-desc aethon-desc" data-i18n="aethon.description">Posez vos questions en langage naturel. AETHON s’appuie sur les données de votre agence dans tous les modules d’Automedon, des réservations et de la flotte à la maintenance et aux finances.</p>
+          </div>
+
+          <div class="aethon-visual">
+            <img class="aethon-logo" src="assets/images/logo/aethon-logo.webp" alt="" width="800" height="800" loading="lazy" decoding="async" />
+          </div>
+
+          <div class="aethon-examples">
+            <h3 class="aethon-examples-title" data-i18n="aethon.examples">Exemples de questions</h3>
+            <ul class="aethon-questions" role="list">
+              <li data-i18n="aethon.question.availability">Quels véhicules sont disponibles demain ?</li>
+              <li data-i18n="aethon.question.maintenance">Quels entretiens sont prévus cette semaine ?</li>
+              <li data-i18n="aethon.question.invoices">Quelles factures restent à régler ?</li>
+            </ul>
+            <a class="btn btn-primary" href="#contact-demo" data-i18n="aethon.cta">Voir AETHON en démo</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== FLIGHT TRACKING ====== -->
+      <section class="section flight-section" id="flight-tracking" aria-labelledby="flight-title">
+        <div class="container flight-grid">
+          <div class="flight-intro">
+            <h2 class="section-title" id="flight-title" data-i18n="flight.title">Suivez les vols de vos clients</h2>
+            <p class="section-desc flight-desc" data-i18n="flight.description">Consultez le statut du vol et l’heure d’arrivée estimée dans une interface dédiée. Si le vol est retardé, ajustez la préparation du véhicule et la remise des clés.</p>
+          </div>
+
+          <figure class="flight-preview">
+            <figcaption class="flight-preview-header">
+              <span data-i18n="flight.preview">Exemple de suivi</span>
+              <span class="flight-status" data-i18n="flight.status">Retardé</span>
+            </figcaption>
+            <div class="flight-route">
+              <div class="flight-airport">
+                <bdi>CDG</bdi>
+                <span data-i18n="flight.origin">Paris</span>
+              </div>
+              <div class="flight-route-line" aria-hidden="true"><span>✈︎</span></div>
+              <div class="flight-airport">
+                <bdi>TUN</bdi>
+                <span data-i18n="flight.destination">Tunis</span>
+              </div>
+            </div>
+            <dl class="flight-times">
+              <div>
+                <dt data-i18n="flight.scheduled">Arrivée prévue</dt>
+                <dd><time datetime="14:20" dir="ltr">14:20</time></dd>
+              </div>
+              <div>
+                <dt data-i18n="flight.estimated">Arrivée estimée</dt>
+                <dd><time datetime="14:55" dir="ltr">14:55</time></dd>
+              </div>
+            </dl>
+          </figure>
+        </div>
+      </section>
+
       <!-- ====== E-INVOICING 2027 ====== -->
       <section class="section einvoice-section" id="einvoice">
         <div class="container">
@@ -682,66 +744,36 @@
 
       // Scroll-driven scatter: MacBook left, iPhone right, iMac up
       const deviceStage = document.getElementById('deviceStage');
-      let deviceScrollTicking = false;
-
-      function clamp01(n) { return Math.min(Math.max(n, 0), 1); }
-      function easeInOutCubic(t) {
-        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-      }
-      function spanProgress(progress, start, end) {
-        return easeInOutCubic(clamp01((progress - start) / (end - start)));
-      }
-      function fadeLate(p) {
-        if (p < 0.62) return 1;
-        return Math.max(0, 1 - (p - 0.62) / 0.38);
-      }
+      const deviceScene = deviceStage.querySelector('.device-scene');
+      let deviceScrollFrame = 0;
+      let previousDeviceProgress = -1;
 
       function updateDeviceScroll() {
-        deviceScrollTicking = false;
-        if (!deviceStage || reduceMotion.matches) return;
+        deviceScrollFrame = 0;
+        if (reduceMotion.matches) return;
+
         const rect = deviceStage.getBoundingClientRect();
-        const travel = Math.max(deviceStage.offsetHeight - window.innerHeight, 1);
-        const progress = clamp01(-rect.top / travel);
-        const vw = window.innerWidth;
-        const vh = window.innerHeight;
-        const stacked = window.matchMedia('(max-width: 768px)').matches;
+        if (rect.top >= window.innerHeight || rect.bottom <= 0) return;
 
-        const phoneP = spanProgress(progress, 0, 0.78);
-        const macP = spanProgress(progress, 0.02, 0.82);
-        const imacP = spanProgress(progress, 0.04, 0.86);
+        const stickyTop = parseFloat(getComputedStyle(deviceScene).top);
+        const travel = Math.max(1, rect.height - deviceScene.offsetHeight);
+        const progress = Math.min(1, Math.max(0, (stickyTop - rect.top) / travel));
+        if (progress === previousDeviceProgress) return;
 
-        deviceStage.style.setProperty('--imac-x', '0px');
-        deviceStage.style.setProperty('--imac-y', `${(-(stacked ? vh * 0.85 : vh * 1.05) * imacP).toFixed(1)}px`);
-        deviceStage.style.setProperty('--imac-scale', (1 - (stacked ? 0.2 : 0.28) * imacP).toFixed(3));
-        deviceStage.style.setProperty('--imac-rot', `${(-8 * imacP).toFixed(2)}deg`);
-        deviceStage.style.setProperty('--imac-opacity', fadeLate(imacP).toFixed(3));
-
-        deviceStage.style.setProperty('--mac-x', `${(-(stacked ? vw * 1.05 : vw * 0.85) * macP).toFixed(1)}px`);
-        deviceStage.style.setProperty('--mac-y', `${((stacked ? vh * 0.18 : vh * 0.22) * macP).toFixed(1)}px`);
-        deviceStage.style.setProperty('--mac-scale', (1 - 0.06 * macP).toFixed(3));
-        deviceStage.style.setProperty('--mac-rot', `${(-16 * macP).toFixed(2)}deg`);
-        deviceStage.style.setProperty('--mac-opacity', fadeLate(macP).toFixed(3));
-
-        deviceStage.style.setProperty('--phone-x', `${((stacked ? vw * 1.05 : vw * 0.8) * phoneP).toFixed(1)}px`);
-        deviceStage.style.setProperty('--phone-y', `${(-(stacked ? vh * 0.28 : vh * 0.48) * phoneP).toFixed(1)}px`);
-        deviceStage.style.setProperty('--phone-scale', (1 + 0.12 * phoneP).toFixed(3));
-        deviceStage.style.setProperty('--phone-rot', `${(18 * phoneP).toFixed(2)}deg`);
-        deviceStage.style.setProperty('--phone-opacity', fadeLate(phoneP).toFixed(3));
-
-        const glow = Math.max(0, 1 - progress * 1.15);
-        deviceStage.style.setProperty('--devices-glow', glow.toFixed(3));
-        deviceStage.style.setProperty('--mac-cue-opacity', Math.max(0, 1 - 2.4 * progress).toFixed(3));
+        previousDeviceProgress = progress;
+        const easedProgress = progress * progress * (3 - 2 * progress);
+        deviceScene.style.setProperty('--device-motion', easedProgress);
       }
 
       function requestDeviceScrollUpdate() {
-        if (deviceScrollTicking) return;
-        deviceScrollTicking = true;
-        requestAnimationFrame(updateDeviceScroll);
+        if (deviceScrollFrame || reduceMotion.matches) return;
+        deviceScrollFrame = requestAnimationFrame(updateDeviceScroll);
       }
 
       window.addEventListener('scroll', requestDeviceScrollUpdate, { passive: true });
       window.addEventListener('resize', requestDeviceScrollUpdate);
-      updateDeviceScroll();
+      reduceMotion.addEventListener('change', requestDeviceScrollUpdate);
+      requestDeviceScrollUpdate();
 
       // Hero carousel (coverflow / center-slide style)
       let heroSwiper = null;

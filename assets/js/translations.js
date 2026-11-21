@@ -69,6 +69,25 @@ const translations = {
     "demos.invoice.title": "Facture Pro",
     "demos.invoice.desc": "Système de facturation avancé et personnalisable, intégré à votre flotte.",
 
+    // AETHON
+    "aethon.title": "AETHON, l’IA au cœur d’Automedon",
+    "aethon.description": "Posez vos questions en langage naturel. AETHON s’appuie sur les données de votre agence dans tous les modules d’Automedon, des réservations et de la flotte à la maintenance et aux finances.",
+    "aethon.examples": "Exemples de questions",
+    "aethon.question.availability": "Quels véhicules sont disponibles demain ?",
+    "aethon.question.maintenance": "Quels entretiens sont prévus cette semaine ?",
+    "aethon.question.invoices": "Quelles factures restent à régler ?",
+    "aethon.cta": "Voir AETHON en démo",
+
+    // Flight tracking
+    "flight.title": "Suivez les vols de vos clients",
+    "flight.description": "Consultez le statut du vol et l’heure d’arrivée estimée dans une interface dédiée. Si le vol est retardé, ajustez la préparation du véhicule et la remise des clés.",
+    "flight.preview": "Exemple de suivi",
+    "flight.status": "Retardé",
+    "flight.origin": "Paris",
+    "flight.destination": "Tunis",
+    "flight.scheduled": "Arrivée prévue",
+    "flight.estimated": "Arrivée estimée",
+
     // E-Invoicing 2027
     "einvoice.label": "Conformité Fiscale",
     "einvoice.title": "Soyez Prêts pour la Facturation Électronique 2027",
@@ -351,6 +370,25 @@ const translations = {
     "demos.invoice.title": "Facture Pro",
     "demos.invoice.desc": "Advanced, customizable invoicing fully integrated with your fleet.",
 
+    // AETHON
+    "aethon.title": "AETHON, the AI at the heart of Automedon",
+    "aethon.description": "Ask questions in your own words. AETHON connects to every Automedon module and draws on your agency’s data, from bookings and fleet management to maintenance and finances.",
+    "aethon.examples": "Example questions",
+    "aethon.question.availability": "Which vehicles are available tomorrow?",
+    "aethon.question.maintenance": "What maintenance is scheduled this week?",
+    "aethon.question.invoices": "Which invoices are still unpaid?",
+    "aethon.cta": "See AETHON in a demo",
+
+    // Flight tracking
+    "flight.title": "Track your customers’ flights",
+    "flight.description": "Check flight status and estimated arrival in a dedicated view. If a flight is delayed, adjust when you prepare the vehicle and hand over the keys.",
+    "flight.preview": "Example flight",
+    "flight.status": "Delayed",
+    "flight.origin": "Paris",
+    "flight.destination": "Tunis",
+    "flight.scheduled": "Scheduled arrival",
+    "flight.estimated": "Estimated arrival",
+
     // E-Invoicing 2027
     "einvoice.label": "Tax Compliance",
     "einvoice.title": "Get Ready for Mandatory E-Invoicing in 2027",
@@ -632,6 +670,25 @@ const translations = {
     "demos.invoice.tag": "فوترة احترافية",
     "demos.invoice.title": "فاتورة برو",
     "demos.invoice.desc": "نظام فوترة متقدم وقابل للتخصيص، مدمج بالكامل مع أسطولك.",
+
+    // AETHON
+    "aethon.title": "AETHON، مساعد الذكاء الاصطناعي في قلب أوتوميدون",
+    "aethon.description": "اطرح أسئلتك بأسلوبك المعتاد. يتصل AETHON بكل وحدات أوتوميدون ويستند إلى بيانات وكالتك، من الحجوزات وإدارة الأسطول إلى الصيانة والشؤون المالية.",
+    "aethon.examples": "أمثلة على الأسئلة",
+    "aethon.question.availability": "ما السيارات المتاحة غدًا؟",
+    "aethon.question.maintenance": "ما أعمال الصيانة المقررة هذا الأسبوع؟",
+    "aethon.question.invoices": "ما الفواتير التي لم تُسدَّد بعد؟",
+    "aethon.cta": "شاهد عرضًا توضيحيًا لـ AETHON",
+
+    // Flight tracking
+    "flight.title": "تابع رحلات عملائك الجوية",
+    "flight.description": "اطّلع على حالة الرحلة ووقت الوصول المقدّر في واجهة مخصّصة. إذا تأخّرت الرحلة، عدّل موعد تجهيز السيارة وتسليم المفاتيح.",
+    "flight.preview": "مثال على تتبّع رحلة",
+    "flight.status": "متأخّرة",
+    "flight.origin": "باريس",
+    "flight.destination": "تونس",
+    "flight.scheduled": "الوصول المجدول",
+    "flight.estimated": "الوصول المقدّر",
 
     // E-Invoicing 2027
     "einvoice.label": "الامتثال الضريبي",
